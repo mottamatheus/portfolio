@@ -22,7 +22,7 @@
     "ecmaVersion": 12,
     "sourceType": "module"
   },
-  "plugins": ["react", "@typescript-eslint", "prettier", "react-hooks"],
+  "plugins": ["react", "@typescript-eslint", "react-hooks", "prettier"],
   "rules": {
 "no-use-before-define": "off",
 "react-hooks/rules-of-hooks": "error",
@@ -37,14 +37,8 @@
     "react/prop-types": "off",
     "@typescript-eslint/indent": "off",
     "import/prefer-default-export": "off",
-    "camelcase": "off",
     "@typescript-eslint/ban-types": "off",
     "react/jsx-filename-extension": [1, { "extensions": [".tsx"] }],
-    "@typescript-eslint/naming-convention": [
-      "error",
-      { "selector": "typeAlias", "prefix": ["T"], "format": ["PascalCase"] },
-      { "selector": "interface", "prefix": ["I"], "format": ["PascalCase"] }
-    ],
     "import/extensions": [
       "error",
       {

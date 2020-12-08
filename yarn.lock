@@ -1756,6 +1756,11 @@ dom-serializer@^1.0.1:
     domhandler "^4.0.0"
     entities "^2.0.0"
 
+dom-walk@^0.1.0:
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/dom-walk/-/dom-walk-0.1.2.tgz#0c548bef048f4d1f2a97249002236060daa3fd84"
+  integrity sha512-6QvTW9mrGeIegrFXdtQi9pk7O/nSK6lSdXW2eqUspN5LWD7UTji2Fqw5V2YLjBpHEoU9Xl/eUWNpDeZvoyOv2w==
+
 domain-browser@^1.1.1:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/domain-browser/-/domain-browser-1.2.0.tgz#3d31f50191a6749dd1375a7f522e823d42e54eda"
@@ -1797,9 +1802,9 @@ domutils@2.1.0:
     domhandler "^3.0.0"
 
 domutils@^2.0.0:
-  version "2.4.3"
-  resolved "https://registry.yarnpkg.com/domutils/-/domutils-2.4.3.tgz#b8ca888695db9baf65b58462c0eff46d2d5cd85d"
-  integrity sha512-MDMfEjgtzHvRX7i21XQfkk/vfZbLOe0VJk8dDETkTTo3BTeH3NXz3Xvs94UQ+GzTw/GjRYKsfVKIIOheYX63fw==
+  version "2.4.4"
+  resolved "https://registry.yarnpkg.com/domutils/-/domutils-2.4.4.tgz#282739c4b150d022d34699797369aad8d19bbbd3"
+  integrity sha512-jBC0vOsECI4OMdD0GC9mGn7NXPLb+Qt6KW1YDQzeQYRUFKmNG8lh7mO5HiELfr+lLQE7loDVI4QcAxV80HS+RA==
   dependencies:
     dom-serializer "^1.0.1"
     domelementtype "^2.0.1"
@@ -1816,9 +1821,9 @@ duplexify@^3.4.2, duplexify@^3.6.0:
     stream-shift "^1.0.0"
 
 electron-to-chromium@^1.3.585:
-  version "1.3.617"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.617.tgz#4192fa4db846c6ad51fffe3a06e71727e9699a74"
-  integrity sha512-yHXyI0fHnU0oLxdu21otLYpW3qwkbo8EBTpqeS9w14fwNjFy65SG6unrS3Gg+wX1JKWlAFCcNt13fG0nsCo/1A==
+  version "1.3.619"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.619.tgz#4dc529ae802f5c9c31e7eea830144340539b62b4"
+  integrity sha512-WFGatwtk7Fw0QcKCZzfGD72hvbcXV8kLY8aFuj0Ip0QRnOtyLYMsc+wXbSjb2w4lk1gcAeNU1/lQ20A+tvuypQ==
 
 elliptic@^6.5.3:
   version "6.5.3"
@@ -2547,6 +2552,14 @@ glob@^7.1.3, glob@^7.1.4, glob@^7.1.6:
     minimatch "^3.0.4"
     once "^1.3.0"
     path-is-absolute "^1.0.0"
+
+global@^4.4.0:
+  version "4.4.0"
+  resolved "https://registry.yarnpkg.com/global/-/global-4.4.0.tgz#3e7b105179006a323ed71aafca3e9c57a5cc6406"
+  integrity sha512-wv/LAoHdRE3BeTGz53FAamhGlPLhlssK45usmGFThIi4XqnBmjKQ16u+RNbP7WvigRZDxUsM0J3gcQ5yicaL0w==
+  dependencies:
+    min-document "^2.19.0"
+    process "^0.11.10"
 
 globals@^11.1.0:
   version "11.12.0"
@@ -3338,6 +3351,13 @@ mimic-response@^3.1.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/mimic-response/-/mimic-response-3.1.0.tgz#2d1d59af9c1b129815accc2c46a022a5ce1fa3c9"
   integrity sha512-z0yWI+4FDrrweS8Zmt4Ej5HdJmky15+L2e6Wgn3+iK5fWzb6T3fhNFq2+MeTRb064c6Wr4N/wv0DzQTjNzHNGQ==
+
+min-document@^2.19.0:
+  version "2.19.0"
+  resolved "https://registry.yarnpkg.com/min-document/-/min-document-2.19.0.tgz#7bd282e3f5842ed295bb748cdd9f1ffa2c824685"
+  integrity sha1-e9KC4/WELtKVu3SM3Z8f+iyCRoU=
+  dependencies:
+    dom-walk "^0.1.0"
 
 minimalistic-assert@^1.0.0, minimalistic-assert@^1.0.1:
   version "1.0.1"
