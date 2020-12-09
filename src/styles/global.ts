@@ -13,4 +13,5 @@ export default createGlobalStyle`
     color: #e1e1e6;
     background-color: #333;
   }
+
 `;
