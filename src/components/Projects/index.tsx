@@ -1,19 +1,22 @@
 import React from 'react';
-import { Container, Card, Text } from './styles';
+import { Container, Card, Text, About } from './styles';
 
 const Projects: React.FC = () => {
   return (
     <Container>
       <Text>Meus projetos</Text>
       <Card>
-        <h2>oi</h2>
+        <About>
+          <h1>oi</h1>
+          <h1>oi</h1>
+        </About>
+        <About>
+          <h1>Siberian</h1>
+          <h1>oi</h1>
+        </About>
       </Card>
-      <Card>
-        <h2>oi</h2>
-      </Card>
-      <Card>
-        <h2>oi</h2>
-      </Card>
+      <Card />
+      <Card />
     </Container>
   );
 };

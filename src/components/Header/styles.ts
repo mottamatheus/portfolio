@@ -1,27 +1,34 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
+  position: relative;
+  max-width: 100rem;
   width: 90%;
-  height: 80vh;
-  margin: 55px auto 0;
+  height: 100vh;
+  margin: 0 auto;
   align-items: center;
   justify-content: center;
   padding: 15px;
-  background-color: #12e588;
+  background-color: var(--bg);
   border-radius: 10px;
-
-  h1 {
-    text-align: center;
-    width: 50%;
-  }
 `;
 
-export const Card = styled.div`
-  display: inline-block;
-  background: rgba(255, 255, 255, 0.2);
-  padding: 3em;
-  border-radius: 3em;
-  position: relative;
-  z-index: 1;
-  backdrop-filter: blur(40px);
+export const TextSection = styled.div`
+  color: var(--text-primary);
+  align-items: center;
+  justify-content: center;
+  width: 55%;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+
+  h1 {
+    text-align: left;
+    font-size: 6.4rem;
+  }
+
+  span {
+    font-size: 3.2rem;
+    color: var(--bg-card);
+  }
 `;

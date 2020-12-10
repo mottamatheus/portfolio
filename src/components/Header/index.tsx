@@ -1,11 +1,14 @@
 import React from 'react';
-import { Container, Card } from './styles';
+import { Container, TextSection } from './styles';
 
 const Header: React.FC = () => {
   return (
     <Container>
-      <h1>oi</h1>
-      <Card />
+      <TextSection>
+        <h1>Hey, I&apos;m</h1>
+        <h1>Matheus Motta</h1>
+        <span>Desenvolvedor Front-End nascido na pandemia.</span>
+      </TextSection>
     </Container>
   );
 };
