@@ -12,9 +12,13 @@ export const Container = styled.div`
 
 export const Text = styled.h1`
   color: var(--text-primary);
-  font-size: 5rem;
+  font-size: 3rem;
   text-align: center;
   margin-bottom: 4rem;
+
+  span {
+    color: var(--bg-card);
+  }
 `;
 
 export const Card = styled.div`

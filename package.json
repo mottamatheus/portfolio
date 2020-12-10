@@ -10,6 +10,7 @@
   "dependencies": {
     "@types/react-icons": "^3.0.0",
     "@types/styled-components": "^5.1.4",
+    "framer-motion": "^2.9.5",
     "global": "^4.4.0",
     "next": "10.0.3",
     "react": "17.0.1",

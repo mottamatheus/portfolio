@@ -2,9 +2,17 @@ import React from 'react';
 import { Container, Card, Text, About } from './styles';
 
 const Projects: React.FC = () => {
+  const openTemplateLiteral = '${';
+  const closeTemplateLiteral = '}';
   return (
     <Container>
-      <Text>Meus projetos</Text>
+      <Text>
+        <h1>
+          {openTemplateLiteral}
+          <span>projetos</span>
+          {closeTemplateLiteral}
+        </h1>
+      </Text>
       <Card>
         <About>
           <h1>oi</h1>

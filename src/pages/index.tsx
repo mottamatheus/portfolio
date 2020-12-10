@@ -7,7 +7,7 @@ const Home: React.FC = () => {
   return (
     <div>
       <Head>
-        <title>Dev. Matheus Motta</title>
+        <title>matheus motta - front-end developer</title>
       </Head>
       <main>
         <Header />
