@@ -29,12 +29,16 @@ export const Card = styled.div`
 `;
 
 export const About = styled.div`
+  color: var(--bg);
   width: 50%;
-  background-color: #000;
   height: 90%;
   padding: 1rem 2rem;
 
   h1 {
     font-size: 3rem;
+  }
+
+  span {
+    font-size: 1.6rem;
   }
 `;

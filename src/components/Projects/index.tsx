@@ -12,7 +12,11 @@ const Projects: React.FC = () => {
         </About>
         <About>
           <h1>Siberian</h1>
-          <h1>oi</h1>
+          <span>E-commerce</span>
+          <p>
+            Projeto desenvolvido com React. Inspirado no site da Amazon, o
+            Siberian seria a &quot;versão soviética&quot; da Amazon.
+          </p>
         </About>
       </Card>
       <Card />
