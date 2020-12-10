@@ -5,7 +5,7 @@ export default createGlobalStyle`
     font-size: 62.5%;
     --bg: #111515;
     --text-primary: #eb3b5a;
-    --bg-card: #a5b1c2;
+    --bg-card: #c3ccde;
   }
   * {
     margin: 0;
@@ -18,7 +18,6 @@ export default createGlobalStyle`
     font-weight: 400;
     color: var(--text-primary);
     background-color: var(--bg);
-
   }
 
 `;

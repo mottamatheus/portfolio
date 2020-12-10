@@ -25,20 +25,22 @@ export const Card = styled.div`
   margin-bottom: 3.5rem;
   border-radius: 1.5rem;
   height: 35rem;
-  background: var(--bg-card);
+  background: rgba(75, 101, 132, 0.6);
+  border-radius: 1rem;
+  box-shadow: 1rem 1rem 1rem rgba(46, 54, 68, 0.03);
 `;
 
 export const About = styled.div`
-  color: var(--bg);
+  color: var(--bg-card);
   width: 50%;
   height: 90%;
   padding: 1rem 2rem;
 
   h1 {
-    font-size: 3rem;
+    font-size: 3.5rem;
   }
 
   span {
-    font-size: 1.6rem;
+    font-size: 2rem;
   }
 `;

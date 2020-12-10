@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   position: relative;
-  max-width: 100rem;
+  max-width: 120rem;
   width: 90%;
   height: 100vh;
   margin: 0 auto;
@@ -27,8 +27,32 @@ export const TextSection = styled.div`
     font-size: 6.4rem;
   }
 
+  p {
+    font-size: 2.4rem;
+    color: #969bab;
+    font-weight: 400;
+    font-family: 'Roboto Mono', monospace;
+  }
+
   span {
-    font-size: 3.2rem;
+    font-size: 6.4rem;
     color: var(--bg-card);
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  div {
+    margin-top: 4rem;
+    font-size: 6.4rem;
+    display: inline-block;
+    margin-right: 1.5rem;
+    transition: all 0.2s ease;
+
+    &:hover {
+      color: #fff;
+    }
   }
 `;
