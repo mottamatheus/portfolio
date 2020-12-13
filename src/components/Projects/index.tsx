@@ -7,11 +7,9 @@ const Projects: React.FC = () => {
   return (
     <Container>
       <Text>
-        <h1>
-          {openTemplateLiteral}
-          <span>projetos</span>
-          {closeTemplateLiteral}
-        </h1>
+        {openTemplateLiteral}
+        <span>projetos</span>
+        {closeTemplateLiteral}
       </Text>
       <Card>
         <About>

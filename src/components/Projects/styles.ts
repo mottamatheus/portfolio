@@ -10,9 +10,10 @@ export const Container = styled.div`
   max-width: 100rem;
 `;
 
-export const Text = styled.h1`
+export const Text = styled.div`
   color: var(--text-primary);
-  font-size: 3rem;
+  font-size: 6rem;
+  font-weight: bold;
   text-align: center;
   margin-bottom: 4rem;
 

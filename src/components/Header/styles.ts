@@ -52,7 +52,7 @@ export const TextSection = styled.div`
     transition: all 0.2s ease;
 
     &:hover {
-      color: #fff;
+      color: var(--bg-card);
     }
   }
 `;

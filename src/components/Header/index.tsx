@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import React from 'react';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { Container, TextSection } from './styles';
@@ -9,14 +10,28 @@ const Header: React.FC = () => {
     <Container>
       <TextSection>
         {/* <h1>Hey, I&apos;m</h1> */}
-        <h1>
+        <motion.h1
+          initial={{ x: -250, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{ delay: 0.1, type: 'spring', stiffness: 120 }}
+        >
           {openTemplateLiteral}
           <span>matheus.motta</span>
           {closeTemplateLiteral}
-        </h1>
-
-        <p>Desenvolvedor Front-End nascido na quarentena.</p>
-        <div>
+        </motion.h1>
+        <motion.p
+          initial={{ y: -15, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ delay: 1, type: 'spring', stiffness: 120 }}
+        >
+          Desenvolvedor Front-End nascido na quarentena.
+        </motion.p>
+        <motion.div
+          whileHover={{
+            scale: [1, 1.15, 1],
+          }}
+          whileTap={{ scale: 0.9 }}
+        >
           <a
             href="https://github.com/mottamatheus/"
             rel="noreferrer"
@@ -24,8 +39,13 @@ const Header: React.FC = () => {
           >
             <FaGithub />
           </a>
-        </div>
-        <div>
+        </motion.div>
+        <motion.div
+          whileHover={{
+            scale: [1, 1.15, 1],
+          }}
+          whileTap={{ scale: 0.9 }}
+        >
           <a
             href="https://www.linkedin.com/in/motta-matheus/"
             rel="noreferrer"
@@ -33,7 +53,7 @@ const Header: React.FC = () => {
           >
             <FaLinkedin />
           </a>
-        </div>
+        </motion.div>
       </TextSection>
     </Container>
   );
