@@ -1,7 +1,8 @@
 import { motion } from 'framer-motion';
 import React from 'react';
 import Image from 'next/image';
-import { FaGithub, FaLinkedin, FaReact } from 'react-icons/fa';
+import { FaJs, FaReact, FaNodeJs } from 'react-icons/fa';
+import { SiTypescript, SiNextDotJs, SiStyledComponents } from 'react-icons/si';
 import { Container, TextSection, MeSection, Technologies } from './styles';
 import Button from '../Button';
 
@@ -23,51 +24,40 @@ const Header: React.FC = () => {
           <span>matheus.motta</span>
           {closeTemplateLiteral}
         </motion.h1>
-        <motion.p
+        <motion.h3
           initial={{ y: -15, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 1, type: 'spring', stiffness: 120 }}
         >
-          Desenvolvedor Front-End nascido na quarentena.
-        </motion.p>
-        <motion.div
-          whileHover={{
-            scale: 1.15,
-            transition: {
-              yoyo: Infinity,
-            },
-          }}
-          whileTap={{ scale: 0.9 }}
+          Desenvolvedor Front-End
+        </motion.h3>
+        <Technologies
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1.5, type: 'spring', stiffness: 120 }}
         >
-          <a
-            href="https://github.com/mottamatheus/"
-            rel="noreferrer"
-            target="_blank"
-          >
-            <FaGithub />
-          </a>
-        </motion.div>
-        <motion.div
-          whileHover={{
-            scale: 1.15,
-            transition: {
-              yoyo: Infinity,
-            },
-          }}
-          whileTap={{ scale: 0.9 }}
-        >
-          <a
-            href="https://www.linkedin.com/in/motta-matheus/"
-            rel="noreferrer"
-            target="_blank"
-          >
-            <FaLinkedin />
-          </a>
-        </motion.div>
+          <span>
+            <FaReact size={55} />
+            <p>ReactJS</p>
+          </span>
+          <span>
+            <SiTypescript size={47} />
+            <p>TypeScript</p>
+          </span>
+          <span>
+            <SiNextDotJs size={47} />
+            <p>Next.js</p>
+          </span>
+          <span>
+            <FaJs size={50} />
+            <p>JavaScript</p>
+          </span>
+          <span>
+            <FaNodeJs size={47} />
+            <p>Node.js</p>
+          </span>
+        </Technologies>
       </TextSection>
-      {/* <Technologies>
-        <FaReact />
-      </Technologies> */}
       <MeSection
         initial={{ y: -35, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}

@@ -23,10 +23,12 @@ export const TextSection = styled.div`
   h1 {
     text-align: left;
     font-size: 6.4rem;
+    margin-bottom: 0.5rem;
   }
 
-  p {
-    font-size: 2.4rem;
+  h3 {
+    font-size: 3.2rem;
+    width: 80%;
     color: #969bab;
     font-weight: 400;
     font-family: 'Roboto Mono', monospace;
@@ -73,4 +75,31 @@ export const MeSection = styled(motion.div)`
   }
 `;
 
-export const Technologies = styled.div``;
+export const Technologies = styled(motion.div)`
+  width: 100%;
+  justify-content: center;
+  border-radius: 1rem;
+  color: var(--text-primary);
+  font-family: 'Roboto Mono', monospace;
+
+  span {
+    display: inline-block;
+
+    text-align: center;
+    margin-right: 2rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    color: var(--text-primary);
+
+    &:hover {
+      color: var(--bg-card);
+    }
+
+    p {
+      font-size: 1.6rem;
+      color: var(--bg-card);
+    }
+  }
+`;
