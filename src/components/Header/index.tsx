@@ -1,15 +1,19 @@
 import { motion } from 'framer-motion';
 import React from 'react';
-import { FaGithub, FaLinkedin } from 'react-icons/fa';
-import { Container, TextSection } from './styles';
+import Image from 'next/image';
+import { FaGithub, FaLinkedin, FaReact } from 'react-icons/fa';
+import { Container, TextSection, MeSection, Technologies } from './styles';
+import Button from '../Button';
 
 const Header: React.FC = () => {
   const openTemplateLiteral = '${';
   const closeTemplateLiteral = '}';
+
   return (
     <Container>
       <TextSection>
         {/* <h1>Hey, I&apos;m</h1> */}
+
         <motion.h1
           initial={{ x: -250, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
@@ -28,7 +32,10 @@ const Header: React.FC = () => {
         </motion.p>
         <motion.div
           whileHover={{
-            scale: [1, 1.15, 1],
+            scale: 1.15,
+            transition: {
+              yoyo: Infinity,
+            },
           }}
           whileTap={{ scale: 0.9 }}
         >
@@ -42,7 +49,10 @@ const Header: React.FC = () => {
         </motion.div>
         <motion.div
           whileHover={{
-            scale: [1, 1.15, 1],
+            scale: 1.15,
+            transition: {
+              yoyo: Infinity,
+            },
           }}
           whileTap={{ scale: 0.9 }}
         >
@@ -55,6 +65,19 @@ const Header: React.FC = () => {
           </a>
         </motion.div>
       </TextSection>
+      {/* <Technologies>
+        <FaReact />
+      </Technologies> */}
+      <MeSection
+        initial={{ y: -35, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ delay: 1, type: 'spring', stiffness: 120 }}
+      >
+        <Image src="/me.png" alt="me" width={500} height={620} />
+        <span>
+          <Button />
+        </span>
+      </MeSection>
     </Container>
   );
 };

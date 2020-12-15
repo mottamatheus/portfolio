@@ -1,15 +1,16 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
 export const Container = styled.div`
   position: relative;
   max-width: 120rem;
   width: 90%;
+  display: flex;
+  flex-direction: row;
   height: 100vh;
   margin: 0 auto;
   align-items: center;
   justify-content: center;
-  padding: 15px;
-  background-color: var(--bg);
   border-radius: 10px;
 `;
 
@@ -18,9 +19,6 @@ export const TextSection = styled.div`
   align-items: center;
   justify-content: center;
   width: 55%;
-  position: absolute;
-  top: 50%;
-  transform: translate(0, -50%);
 
   h1 {
     text-align: left;
@@ -56,3 +54,23 @@ export const TextSection = styled.div`
     }
   }
 `;
+
+export const MeSection = styled(motion.div)`
+  color: var(--text-primary);
+  align-items: center;
+  justify-content: center;
+  width: 45%;
+  display: flex;
+
+  span {
+    margin: 0 auto;
+    margin-bottom: 30%;
+
+    div {
+      padding-left: 1.2rem;
+      margin-bottom: 2rem;
+    }
+  }
+`;
+
+export const Technologies = styled.div``;
