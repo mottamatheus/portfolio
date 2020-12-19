@@ -7,11 +7,11 @@ export const Container = styled(motion.div)`
   transition: all 0.2s ease;
 
   a {
-    color: var(--bg-card);
+    color: var(--text-primary);
     transition: all 0.2s ease;
 
     &:hover {
-      color: var(--text-primary);
+      color: var(--text-secondary);
     }
   }
 `;

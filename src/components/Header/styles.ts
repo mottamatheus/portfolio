@@ -2,67 +2,102 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
 export const Container = styled.div`
-  position: relative;
-  max-width: 120rem;
-  width: 90%;
-  display: flex;
-  flex-direction: row;
   height: 100vh;
+  width: 80vw;
+  max-width: 120rem;
   margin: 0 auto;
-  align-items: center;
+  display: flex;
   justify-content: center;
-  border-radius: 10px;
+  align-items: center;
+
+  @media (max-width: 500px) {
+    width: 90vw;
+    justify-content: center;
+  }
 `;
 
-export const TextSection = styled.div`
+export const TextSection = styled(motion.div)`
   color: var(--text-primary);
-  align-items: center;
-  justify-content: center;
-  width: 55%;
+  width: 50%;
+  align-items: left;
+  position: relative;
 
   h1 {
-    text-align: left;
-    font-size: 6.4rem;
+    font-size: 6.2rem;
+    color: var(--text-secondary);
     margin-bottom: 0.5rem;
   }
 
   h3 {
     font-size: 3.2rem;
-    width: 80%;
-    color: #969bab;
+    color: var(--text-primary);
     font-weight: 400;
     font-family: 'Roboto Mono', monospace;
   }
 
-  span {
-    font-size: 6.4rem;
-    color: var(--bg-card);
+  p {
+    font-family: 'Inter', sans-serif;
+    line-height: 2.7rem;
+    font-weight: 300;
+    margin-top: 5rem;
   }
 
-  a {
-    text-decoration: none;
-    color: inherit;
-  }
+  @media (max-width: 1150px) {
+    h1 {
+      font-size: 5rem;
+    }
 
-  div {
-    margin-top: 4rem;
-    font-size: 6.4rem;
-    display: inline-block;
-    margin-right: 1.5rem;
-    transition: all 0.2s ease;
+    h2 {
+      font-size: 2rem;
+    }
 
-    &:hover {
+    p {
+      width: 100%;
+    }
+
+    @media (max-width: 1000px) {
+      top: 10%;
+      width: 90%;
+
+      h1 {
+        font-size: 3rem;
+      }
+
+      h2 {
+        font-size: 1.4rem;
+      }
+
+      p {
+        font-size: 1.2rem;
+        width: 75%;
+        line-height: 1.7rem;
+      }
+    }
+
+    span {
+      font-size: 6.4rem;
       color: var(--bg-card);
+    }
+
+    div {
+      transition: all 0.2s ease;
+
+      &:hover {
+        color: var(--bg-card);
+      }
     }
   }
 `;
 
 export const MeSection = styled(motion.div)`
-  color: var(--text-primary);
+  width: 50%;
+  text-align: center;
+  display: flex;
   align-items: center;
   justify-content: center;
-  width: 45%;
-  display: flex;
+  position: relative;
+  transition: all 0.2s ease;
+  z-index: 2;
 
   span {
     margin: 0 auto;
@@ -73,33 +108,86 @@ export const MeSection = styled(motion.div)`
       margin-bottom: 2rem;
     }
   }
+
+  @media (max-width: 1000px) {
+    position: absolute;
+    opacity: 1;
+    top: 15%;
+    transition: all 0.2s ease;
+
+    img {
+      opacity: 0.1;
+      width: 100%;
+    }
+
+    svg {
+      width: 6.5rem;
+      height: 6.5rem;
+
+      @media (max-width: 500px) {
+        width: 4.2rem;
+        height: 4.2rem;
+      }
+    }
+  }
 `;
 
 export const Technologies = styled(motion.div)`
-  width: 100%;
   justify-content: center;
-  border-radius: 1rem;
   color: var(--text-primary);
   font-family: 'Roboto Mono', monospace;
 
   span {
     display: inline-block;
-
     text-align: center;
     margin-right: 2rem;
-    flex-direction: column;
+    margin-top: 4rem;
     align-items: center;
     justify-content: center;
     transition: all 0.3s ease;
-    color: var(--text-primary);
+    color: var(--text-secondary);
 
     &:hover {
-      color: var(--bg-card);
+      color: var(--text-primary);
+    }
+
+    @media (max-width: 500px) {
+      svg {
+        display: inline-block;
+      }
     }
 
     p {
-      font-size: 1.6rem;
-      color: var(--bg-card);
+      font-size: 1.4rem;
+      margin-top: 0.7rem;
+      font-family: 'Roboto Mono', sans-serif;
+      color: var(--text-primary);
+
+      @media (max-width: 500px) {
+        font-size: 1rem;
+      }
+    }
+  }
+`;
+
+export const Scroll = styled(motion.div)`
+  position: absolute;
+  color: var(--text-secondary);
+  z-index: 7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 5%;
+  margin: 0 auto;
+
+  svg {
+    width: 10rem;
+    height: 10rem;
+    cursor: pointer;
+
+    @media (max-width: 500px) {
+      width: 6rem;
+      height: 6rem;
     }
   }
 `;
