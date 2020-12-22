@@ -14,8 +14,6 @@ import {
 import Button from '../Button';
 
 const Header: React.FC = () => {
-  const openTemplateLiteral = '${';
-  const closeTemplateLiteral = '}';
   const scrollDown = () => {
     window.scrollTo({
       top: 900,
@@ -79,9 +77,14 @@ const Header: React.FC = () => {
         </motion.span>
       </MeSection>
       <Scroll
-        initial={{ visibility: 'hidden' }}
-        animate={{ visibility: 'visible', y: [10, -10, 10] }}
-        transition={{ delay: 2.5, repeat: Infinity, duration: 1 }}
+        initial={{ visibility: 'hidden', opacity: 0 }}
+        animate={{ visibility: 'visible', opacity: 1, y: [10, -10, 10] }}
+        transition={{
+          opacity: 1,
+          delay: 2.5,
+          repeat: Infinity,
+          duration: 1,
+        }}
       >
         <BiChevronsDown onClick={scrollDown} />
       </Scroll>
