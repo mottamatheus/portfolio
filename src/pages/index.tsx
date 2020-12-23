@@ -5,7 +5,7 @@ const Home: React.FC = () => {
   return (
     <div>
       <Head>
-        <title>matheus.motta - reactjs developer</title>
+        <title>Matheus Motta - FullStack Developer</title>
       </Head>
       <main />
     </div>

@@ -97,11 +97,15 @@ export const MeSection = styled(motion.div)`
   justify-content: center;
   position: relative;
   transition: all 0.2s ease;
-  z-index: 2;
+
+  img {
+    z-index: 3;
+  }
 
   span {
     margin: 0 auto;
     margin-bottom: 30%;
+    z-index: 2;
 
     div {
       padding-left: 1.2rem;

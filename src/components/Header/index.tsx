@@ -19,13 +19,13 @@ const Header: React.FC = () => {
   const router = useRouter();
 
   const greeting =
-    router.locale === 'pt'
-      ? 'Alô galisteu'
+    router.locale === 'pt-BR'
+      ? 'Desenvolvedor FullStack'
       : router.locale === 'en'
-      ? 'Hello world'
+      ? 'FullStack Developer'
       : router.locale === 'es'
-      ? 'Que pasa?'
-      : '';
+      ? 'Desarrollador FullStack'
+      : 'FullStack Developer';
   const scrollDown = () => {
     window.scrollTo({
       top: 900,
@@ -40,13 +40,13 @@ const Header: React.FC = () => {
         animate={{ x: 0, opacity: 1 }}
         transition={{ delay: 0.1, type: 'spring', stiffness: 120 }}
       >
-        <motion.h1>{greeting}</motion.h1>
-        <motion.h3>Desenvolvedor Front-End</motion.h3>
-        <motion.p>
+        <h1>Matheus Motta</h1>
+        <h3>{greeting}</h3>
+        <p>
           Olá! Sou de Porto Alegre e estou me especializando em desenvolver
           aplicações web performáticas, escaláveis e com foco na experiência de
           usuário. Crio soluções com:
-        </motion.p>
+        </p>
         <Technologies>
           <span>
             <FaReact size={55} />
