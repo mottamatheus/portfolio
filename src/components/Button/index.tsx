@@ -51,7 +51,7 @@ const Button: React.FC = () => {
         whileTap={{ scale: 0.9 }}
       >
         <a
-          href="https://www.linkedin.com/in/motta-matheus/"
+          href="mailto:matheusmottaq@gmail.com"
           rel="noreferrer"
           target="_blank"
         >

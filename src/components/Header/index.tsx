@@ -1,6 +1,8 @@
+/* eslint-disable no-nested-ternary */
 import { motion } from 'framer-motion';
 import React from 'react';
 import Image from 'next/image';
+import { useRouter } from 'next/router';
 import { FaJs, FaReact, FaNodeJs } from 'react-icons/fa';
 import { SiTypescript, SiNextDotJs, SiStyledComponents } from 'react-icons/si';
 import { BiChevronsDown } from 'react-icons/bi';
@@ -14,6 +16,16 @@ import {
 import Button from '../Button';
 
 const Header: React.FC = () => {
+  const router = useRouter();
+
+  const greeting =
+    router.locale === 'pt'
+      ? 'Alô galisteu'
+      : router.locale === 'en'
+      ? 'Hello world'
+      : router.locale === 'es'
+      ? 'Que pasa?'
+      : '';
   const scrollDown = () => {
     window.scrollTo({
       top: 900,
@@ -28,18 +40,14 @@ const Header: React.FC = () => {
         animate={{ x: 0, opacity: 1 }}
         transition={{ delay: 0.1, type: 'spring', stiffness: 120 }}
       >
-        <motion.h1>Matheus Motta</motion.h1>
+        <motion.h1>{greeting}</motion.h1>
         <motion.h3>Desenvolvedor Front-End</motion.h3>
         <motion.p>
           Olá! Sou de Porto Alegre e estou me especializando em desenvolver
           aplicações web performáticas, escaláveis e com foco na experiência de
           usuário. Crio soluções com:
         </motion.p>
-        <Technologies
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1.5, type: 'spring', stiffness: 120 }}
-        >
+        <Technologies>
           <span>
             <FaReact size={55} />
             <p>ReactJS</p>
