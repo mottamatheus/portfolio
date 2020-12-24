@@ -1,9 +1,10 @@
 import React from 'react';
+import Link from 'next/link';
 import Switch from 'react-switch';
 import { RiMoonFill } from 'react-icons/ri';
 import { HiSun } from 'react-icons/hi';
 
-import { Container, Content, Links } from './styles';
+import { Container, Content, Links, Languages } from './styles';
 
 const Navbar: React.FC = () => {
   return (
@@ -14,6 +15,11 @@ const Navbar: React.FC = () => {
           <span>Sobre Mim</span>
           <span>Contato</span>
         </Links>
+        <Languages>
+          <span>PT</span>
+          <span>EN</span>
+          <span>ES</span>
+        </Languages>
         <Switch
           checked
           checkedIcon={
@@ -48,7 +54,7 @@ const Navbar: React.FC = () => {
           width={55}
           onColor="#eb3b5a"
           offColor="#eceaea"
-          onChange={() => console.log('oi')}
+          onChange={() => console.log('oi, mottinha')}
         />
       </Content>
     </Container>

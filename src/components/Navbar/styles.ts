@@ -7,7 +7,10 @@ export const Container = styled.div`
   align-items: center;
   background-color: var(--bg-card);
   position: absolute;
+  justify-content: center;
   margin: auto;
+  font-size: 1.6rem;
+  font-family: 'Roboto Mono', monospace;
 `;
 
 export const Content = styled.div`
@@ -15,14 +18,24 @@ export const Content = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 80%;
+  width: 80vw;
 `;
 
 export const Links = styled.div`
-  font-size: 1.6rem;
-  font-family: 'Roboto Mono', monospace;
-
   span {
-    margin-left: 3rem;
+    margin-right: 3rem;
+    cursor: pointer;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: var(--text-secondary);
+    }
+  }
+`;
+
+export const Languages = styled.div`
+  span {
+    cursor: pointer;
+    margin-right: 1.6rem;
   }
 `;
