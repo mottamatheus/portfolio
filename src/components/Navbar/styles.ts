@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Text } from '../About/styles';
 
 export const Container = styled.div`
   display: flex;
@@ -37,5 +38,12 @@ export const Languages = styled.div`
   span {
     cursor: pointer;
     margin-right: 1.6rem;
+  }
+
+  .portuguese {
+    color: var(--color-primary);
+    padding: 3px 5px;
+    border-radius: 5px;
+    background-color: #222;
   }
 `;

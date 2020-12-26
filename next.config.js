@@ -5,6 +5,6 @@ module.exports = withImages({
   i18n: {
     locales: ['pt-BR', 'en', 'es'],
     defaultLocale: 'pt-BR',
-    // localeDetection: false,
+    localeDetection: false,
   },
 });

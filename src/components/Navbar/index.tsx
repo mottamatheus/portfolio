@@ -3,23 +3,31 @@ import Link from 'next/link';
 import Switch from 'react-switch';
 import { RiMoonFill } from 'react-icons/ri';
 import { HiSun } from 'react-icons/hi';
+import { Dropdown } from 'semantic-ui-react';
 
 import { Container, Content, Links, Languages } from './styles';
+
+const languageOptions = [
+  { key: 'portuguese', text: 'PT', value: 'portuguese' },
+  { key: 'spanish', text: 'ES', value: 'spanish' },
+  { key: 'english', text: 'EN', value: 'english' },
+];
 
 const Navbar: React.FC = () => {
   return (
     <Container>
       <Content>
         <Links>
-          <span>Portfólio</span>
+          <span>Projetos</span>
           <span>Sobre Mim</span>
           <span>Contato</span>
         </Links>
-        <Languages>
-          <span>PT</span>
+        {/* <Languages>
+          <span className="portuguese">PT</span>
           <span>EN</span>
           <span>ES</span>
-        </Languages>
+        </Languages> */}
+
         <Switch
           checked
           checkedIcon={

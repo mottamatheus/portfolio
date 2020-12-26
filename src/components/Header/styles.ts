@@ -25,7 +25,6 @@ export const TextSection = styled(motion.div)`
   h1 {
     font-size: 6.2rem;
     color: var(--text-secondary);
-    margin-bottom: 0.5rem;
   }
 
   h3 {
@@ -38,6 +37,7 @@ export const TextSection = styled(motion.div)`
   p {
     font-family: 'Inter', sans-serif;
     line-height: 2.7rem;
+    width: 90%;
     font-weight: 300;
     margin-top: 5rem;
   }
@@ -108,7 +108,6 @@ export const MeSection = styled(motion.div)`
     z-index: 2;
 
     div {
-      padding-left: 1.2rem;
       margin-bottom: 2rem;
     }
   }

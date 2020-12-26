@@ -1,10 +1,13 @@
 import { motion } from 'framer-motion';
-import React from 'react';
+import React, { useState } from 'react';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { MdMail } from 'react-icons/md';
-import { Container } from './styles';
+import { CopyToClipboard } from 'react-copy-to-clipboard';
+import { Container, Tooltip } from './styles';
 
 const Button: React.FC = () => {
+  const [copied, setCopied] = useState(false);
+
   return (
     <Container>
       <motion.div
@@ -50,14 +53,16 @@ const Button: React.FC = () => {
         }}
         whileTap={{ scale: 0.9 }}
       >
-        <a
-          href="mailto:matheusmottaq@gmail.com"
-          rel="noreferrer"
-          target="_blank"
+        <CopyToClipboard
+          text="matheusmottaq@gmail.com"
+          onCopy={() => setCopied(!copied)}
         >
-          <MdMail size={80} />
-        </a>
+          <span>
+            <MdMail size={80} />
+          </span>
+        </CopyToClipboard>
       </motion.div>
+      {copied ? <Tooltip>Copiado para área de transferência!</Tooltip> : null}
     </Container>
   );
 };
