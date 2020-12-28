@@ -4,8 +4,9 @@ import React from 'react';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
 import { FaJs, FaReact, FaNodeJs } from 'react-icons/fa';
-import { SiTypescript, SiNextDotJs, SiStyledComponents } from 'react-icons/si';
+import { SiTypescript, SiNextDotJs } from 'react-icons/si';
 import { BiChevronsDown } from 'react-icons/bi';
+import english from '../../languages/english';
 import {
   Container,
   TextSection,
@@ -16,16 +17,16 @@ import {
 import Button from '../Button';
 
 const Header: React.FC = () => {
-  const router = useRouter();
+  const { locale } = useRouter();
+  const { header } = english;
 
   const greeting =
-    router.locale === 'pt-BR'
+    locale === 'pt'
       ? 'Desenvolvedor FullStack'
-      : router.locale === 'en'
+      : locale === 'en'
       ? 'FullStack Developer'
-      : router.locale === 'es'
-      ? 'Desarrollador FullStack'
       : 'FullStack Developer';
+
   const scrollDown = () => {
     window.scrollTo({
       top: 900,
@@ -43,9 +44,9 @@ const Header: React.FC = () => {
         <h1>Matheus Motta</h1>
         <h3>{greeting}</h3>
         <p>
-          Olá! Sou de Porto Alegre e estou me especializando em desenvolver
-          aplicações web performáticas, escaláveis e com foco na experiência de
-          usuário. Crio soluções com:
+          {locale === 'en'
+            ? header
+            : 'Olá! Sou de Porto Alegre e estou me especializando em desenvolver aplicações web performáticas, escaláveis e com foco na experiência de usuário. Crio soluções com:'}
         </p>
         <Technologies>
           <span>
