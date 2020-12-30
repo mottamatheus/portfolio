@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
 export const Container = styled.div`
-  height: 100vh;
+  height: 95vh;
   width: 80vw;
   max-width: 120rem;
   margin: 0 auto;

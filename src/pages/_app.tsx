@@ -13,8 +13,8 @@ const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
     <>
       <ThemeProvider theme={theme}>
         <Navbar />
-        <Header />
-        <Projects />
+        {/* <Header />
+        <Projects /> */}
         {/* <About /> */}
       </ThemeProvider>
       <Component {...pageProps} />

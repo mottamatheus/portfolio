@@ -1,13 +1,11 @@
 import styled from 'styled-components';
-import { Text } from '../About/styles';
 
 export const Container = styled.div`
   display: flex;
-  width: 100%;
-  height: 5rem;
+  width: 100vw;
+  height: 5vh;
   align-items: center;
   background-color: var(--bg-card);
-  position: absolute;
   justify-content: center;
   margin: auto;
   font-size: 1.6rem;
@@ -23,7 +21,8 @@ export const Content = styled.div`
 `;
 
 export const Links = styled.div`
-  span {
+  span,
+  a {
     margin-right: 3rem;
     cursor: pointer;
     transition: color 0.2s ease;

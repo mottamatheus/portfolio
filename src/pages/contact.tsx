@@ -1,5 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
+import Contact from '../components/Contact';
 
 const Home: React.FC = () => {
   return (
@@ -7,7 +8,9 @@ const Home: React.FC = () => {
       <Head>
         <title>Matheus Motta | Contato</title>
       </Head>
-      <main />
+      <main>
+        <Contact />
+      </main>
     </div>
   );
 };

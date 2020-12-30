@@ -2,10 +2,12 @@
 import { motion } from 'framer-motion';
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { FaJs, FaReact, FaNodeJs } from 'react-icons/fa';
 import { SiTypescript, SiNextDotJs } from 'react-icons/si';
 import { BiChevronsDown } from 'react-icons/bi';
+import { IoIosArrowForward } from 'react-icons/io';
 import english from '../../languages/english';
 import {
   Container,
@@ -26,13 +28,6 @@ const Header: React.FC = () => {
       : locale === 'en'
       ? 'FullStack Developer'
       : 'FullStack Developer';
-
-  const scrollDown = () => {
-    window.scrollTo({
-      top: 900,
-      behavior: 'smooth',
-    });
-  };
 
   return (
     <Container>
@@ -87,7 +82,7 @@ const Header: React.FC = () => {
       </MeSection>
       <Scroll
         initial={{ visibility: 'hidden', opacity: 0 }}
-        animate={{ visibility: 'visible', opacity: 1, y: [10, -10, 10] }}
+        animate={{ visibility: 'visible', opacity: 1, x: [10, -10, 10] }}
         transition={{
           opacity: 1,
           delay: 2.5,
@@ -95,7 +90,9 @@ const Header: React.FC = () => {
           duration: 1,
         }}
       >
-        <BiChevronsDown onClick={scrollDown} />
+        <Link href="/projects">
+          <IoIosArrowForward />
+        </Link>
       </Scroll>
     </Container>
   );

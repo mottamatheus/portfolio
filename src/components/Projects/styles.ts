@@ -161,7 +161,6 @@ export const Title = styled.h2`
   font-size: 6rem;
   text-align: center;
   padding-bottom: 6rem;
-  max-width: 120rem;
   margin: 0 auto;
   color: var(--text-secondary);
 
