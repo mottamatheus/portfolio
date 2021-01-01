@@ -22,6 +22,7 @@ export const Form = styled.form`
   flex-direction: column;
 
   input {
+    color: var(--text-primary);
     background-color: var(--bg-card);
     border: none;
     padding: 1.6rem;
@@ -30,6 +31,7 @@ export const Form = styled.form`
   }
 
   textarea {
+    color: var(--text-primary);
     resize: none;
     border: none;
     padding: 1.6rem;

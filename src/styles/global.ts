@@ -25,6 +25,7 @@ export default createGlobalStyle`
   }
 
   body {
+    overflow-y: overlay;
     font-family: 'Inter', sans-serif;
     color: var(--text-primary);
     background: var(--bg)

@@ -6,7 +6,6 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { FaJs, FaReact, FaNodeJs } from 'react-icons/fa';
 import { SiTypescript, SiNextDotJs } from 'react-icons/si';
-import { BiChevronsDown } from 'react-icons/bi';
 import { IoIosArrowForward } from 'react-icons/io';
 import english from '../../languages/english';
 import {
@@ -80,20 +79,20 @@ const Header: React.FC = () => {
           <Button />
         </motion.span>
       </MeSection>
-      <Scroll
-        initial={{ visibility: 'hidden', opacity: 0 }}
-        animate={{ visibility: 'visible', opacity: 1, x: [10, -10, 10] }}
-        transition={{
-          opacity: 1,
-          delay: 2.5,
-          repeat: Infinity,
-          duration: 1,
-        }}
-      >
-        <Link href="/projects">
+      <Link href="/projects">
+        <Scroll
+          initial={{ visibility: 'hidden', opacity: 0 }}
+          animate={{ visibility: 'visible', opacity: 1, x: [10, -10, 10] }}
+          transition={{
+            opacity: 1,
+            delay: 2.5,
+            repeat: Infinity,
+            duration: 1,
+          }}
+        >
           <IoIosArrowForward />
-        </Link>
-      </Scroll>
+        </Scroll>
+      </Link>
     </Container>
   );
 };
