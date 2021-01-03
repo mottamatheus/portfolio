@@ -1,8 +1,13 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import { Container, Form } from './styles';
+import { useRouter } from 'next/router';
+import { english, portuguese } from '../../languages';
+import { Container, Title, Form } from './styles';
 
 const ContactForm: React.FC = () => {
+  const { locale } = useRouter();
+  const { form } = english;
+  const { formPT } = portuguese;
   const [status, setStatus] = useState({
     submitted: false,
     submitting: false,
@@ -71,7 +76,7 @@ const ContactForm: React.FC = () => {
 
   return (
     <Container>
-      <h1>Contact</h1>
+      <Title>{locale === 'en' ? form[5] : formPT[5]}</Title>
       <Form onSubmit={handleOnSubmit}>
         <input
           required
@@ -80,7 +85,7 @@ const ContactForm: React.FC = () => {
           type="text"
           onChange={handleOnChange}
           value={inputs.name}
-          placeholder="Your name"
+          placeholder={locale === 'en' ? form[0] : formPT[0]}
         />
         <input
           id="email"
@@ -89,13 +94,13 @@ const ContactForm: React.FC = () => {
           onChange={handleOnChange}
           required
           value={inputs.email}
-          placeholder="Email Address"
+          placeholder={locale === 'en' ? form[1] : formPT[1]}
         />
         <input
           id="subject"
           name="subject"
           type="text"
-          placeholder="Subject"
+          placeholder={locale === 'en' ? form[2] : formPT[2]}
           onChange={handleOnChange}
           required
           value={inputs.subject}
@@ -106,10 +111,10 @@ const ContactForm: React.FC = () => {
           onChange={handleOnChange}
           required
           value={inputs.message}
-          placeholder="Descrição"
+          placeholder={locale === 'en' ? form[3] : formPT[3]}
           spellCheck="false"
         />
-        <button type="submit">Enviar</button>
+        <button type="submit">{locale === 'en' ? form[4] : formPT[4]}</button>
       </Form>
     </Container>
   );

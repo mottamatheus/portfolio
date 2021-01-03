@@ -1,10 +1,12 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
+import { useRouter } from 'next/router';
 import Link from 'next/link';
 import Switch from 'react-switch';
 import { RiMoonFill } from 'react-icons/ri';
 import { HiSun } from 'react-icons/hi';
 import { Dropdown } from 'semantic-ui-react';
+import { english, portuguese } from '../../languages/index';
 
 import { Container, Content, Links } from './styles';
 
@@ -15,6 +17,9 @@ const languageOptions = [
 ];
 
 const Navbar: React.FC = () => {
+  const { locale } = useRouter();
+  const { navbar } = english;
+  const { navbarPT } = portuguese;
   return (
     <Container>
       <Content>
@@ -23,13 +28,10 @@ const Navbar: React.FC = () => {
             <span>Home</span>
           </Link>
           <Link href="/projects">
-            <span>Projetos</span>
+            <span>{locale === 'en' ? navbar[0] : navbarPT[0]}</span>
           </Link>
-          {/* <Link href="/about">
-            <span>Sobre Mim</span>
-          </Link> */}
           <Link href="/contact">
-            <span>Contato</span>
+            <span>{locale === 'en' ? navbar[2] : navbarPT[2]}</span>
           </Link>
         </Links>
         {/* <Languages>

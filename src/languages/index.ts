@@ -1,8 +1,16 @@
-const english = {
+export const english = {
   navbar: ['Projects', 'About me', 'Contact'],
   position: 'FullStack Developer',
-  header:
+  headline:
     "Hello! I'm from Porto Alegre, Brazil. I'm specializing in developing performant and scalable web apps focusing on user experience. I create solutions with:",
+  form: [
+    'Your name',
+    'Your email',
+    'Subject',
+    'Description',
+    'Send message',
+    'Contact',
+  ],
   projectsName: 'Projects',
   gopets:
     'GoPets is a bath and grooming scheduling platform for pet shops. When logged the user can see in his dashboard which appointments he has for the day and the available slots, making it easier for pet shops to organize their staff. Customers can also register their pets and make appointments through the platform.',
@@ -14,4 +22,17 @@ const english = {
     'Elleos is a platform that seeks to connect charities and volunteers. It has a web and mobile version, where you can register institutions or consult information about them. Both versions are connected to the same backend, enabling the sharing of information between different platforms.',
 };
 
-export default english;
+export const portuguese = {
+  navbarPT: ['Projetos', 'Sobre', 'Contato'],
+  positionPT: 'Desenvolvedor FullStack',
+  headlinePT:
+    'Olá! Sou de Porto Alegre e estou me especializando em desenvolver aplicações web performáticas, escaláveis e com foco na experiência de usuário. Crio soluções com:',
+  formPT: [
+    'Seu nome',
+    'Seu email',
+    'Assunto',
+    'Descrição',
+    'Enviar mensagem',
+    'Contato',
+  ],
+};

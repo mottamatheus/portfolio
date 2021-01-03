@@ -2,7 +2,7 @@ import React from 'react';
 import { FiGithub, FiExternalLink } from 'react-icons/fi';
 import { useRouter } from 'next/router';
 import { Title, Container, ImageDiv, About, ExternalLink } from './styles';
-import english from '../../languages/english';
+import { english, portuguese } from '../../languages';
 import siberianImg from '../../assets/siberian.png';
 import skilldevImg from '../../assets/skilldev.png';
 import goPets from '../../assets/gopets.png';

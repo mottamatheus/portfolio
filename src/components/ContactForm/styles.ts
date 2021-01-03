@@ -15,13 +15,27 @@ export const Container = styled.div`
   }
 `;
 
+export const Title = styled.h2`
+  font-size: 4rem;
+  text-align: center;
+  padding-bottom: 6rem;
+  margin: 0 auto;
+  color: var(--text-secondary);
+
+  @media (max-width: 500px) {
+    font-size: 3rem;
+  }
+`;
+
 export const Form = styled.form`
   display: flex;
   width: 60rem;
   max-width: 70vw;
+
   flex-direction: column;
 
   input {
+    font-family: 'Roboto Mono', monospace;
     color: var(--text-primary);
     background-color: var(--bg-card);
     border: none;
@@ -31,6 +45,7 @@ export const Form = styled.form`
   }
 
   textarea {
+    font-size: 1.8rem;
     color: var(--text-primary);
     resize: none;
     border: none;
@@ -42,6 +57,7 @@ export const Form = styled.form`
   }
 
   button {
+    font-family: 'Roboto Mono', monospace;
     cursor: pointer;
     padding: 1.6rem;
     border-radius: 0.5rem;

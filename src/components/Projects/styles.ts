@@ -11,6 +11,19 @@ export const Container = styled.div`
   margin-bottom: 7rem;
 `;
 
+export const Title = styled.h2`
+  font-size: 4rem;
+  text-align: center;
+  padding-bottom: 6rem;
+  margin: 0 auto;
+  margin-top: 10rem;
+  color: var(--text-secondary);
+
+  @media (max-width: 500px) {
+    font-size: 3rem;
+  }
+`;
+
 export const ImageDiv = styled(motion.a)`
   width: 60%;
   position: absolute;
@@ -154,17 +167,5 @@ export const ExternalLink = styled.div`
 
   &:hover {
     opacity: 1;
-  }
-`;
-
-export const Title = styled.h2`
-  font-size: 6rem;
-  text-align: center;
-  padding-bottom: 6rem;
-  margin: 0 auto;
-  color: var(--text-secondary);
-
-  @media (max-width: 500px) {
-    font-size: 3rem;
   }
 `;

@@ -1,13 +1,12 @@
-/* eslint-disable no-nested-ternary */
-import { motion } from 'framer-motion';
 import React from 'react';
+import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { FaJs, FaReact, FaNodeJs } from 'react-icons/fa';
 import { SiTypescript, SiNextDotJs } from 'react-icons/si';
 import { IoIosArrowForward } from 'react-icons/io';
-import english from '../../languages/english';
+import { english, portuguese } from '../../languages';
 import {
   Container,
   TextSection,
@@ -19,14 +18,8 @@ import Button from '../Button';
 
 const Header: React.FC = () => {
   const { locale } = useRouter();
-  const { header } = english;
-
-  const greeting =
-    locale === 'pt'
-      ? 'Desenvolvedor FullStack'
-      : locale === 'en'
-      ? 'FullStack Developer'
-      : 'FullStack Developer';
+  const { position, headline } = english;
+  const { positionPT, headlinePT } = portuguese;
 
   return (
     <Container>
@@ -36,12 +29,8 @@ const Header: React.FC = () => {
         transition={{ delay: 0.1, type: 'spring', stiffness: 120 }}
       >
         <h1>Matheus Motta</h1>
-        <h3>{greeting}</h3>
-        <p>
-          {locale === 'en'
-            ? header
-            : 'Olá! Sou de Porto Alegre e estou me especializando em desenvolver aplicações web performáticas, escaláveis e com foco na experiência de usuário. Crio soluções com:'}
-        </p>
+        <h3>{locale === 'en' ? position : positionPT}</h3>
+        <p>{locale === 'en' ? headline : headlinePT}</p>
         <Technologies>
           <span>
             <FaReact size={55} />
