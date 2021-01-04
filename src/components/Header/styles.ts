@@ -97,6 +97,7 @@ export const MeSection = styled(motion.div)`
   justify-content: center;
   position: relative;
   transition: all 0.2s ease;
+  bottom: 3.6rem;
 
   img {
     z-index: 3;
@@ -150,8 +151,28 @@ export const Technologies = styled(motion.div)`
     transition: all 0.3s ease;
     color: var(--text-secondary);
 
-    &:hover {
-      color: var(--text-primary);
+    svg {
+      transition: all 0.3s ease;
+    }
+
+    &:hover .react {
+      color: #61dbfb;
+    }
+
+    &:hover .typescript {
+      color: #007acc;
+    }
+
+    &:hover .next {
+      color: #fff;
+    }
+
+    &:hover .javascript {
+      color: #f0db4f;
+    }
+
+    &:hover .node {
+      color: #83ba63;
     }
 
     @media (max-width: 500px) {
@@ -175,7 +196,8 @@ export const Technologies = styled(motion.div)`
 
 export const Scroll = styled(motion.div)`
   position: absolute;
-  color: var(--text-secondary);
+  font-size: 2rem;
+  color: var(--text-primary);
   z-index: 7;
   display: flex;
   justify-content: center;
@@ -184,8 +206,9 @@ export const Scroll = styled(motion.div)`
   margin: 0 auto;
 
   svg {
-    width: 10rem;
-    height: 10rem;
+    width: 5rem;
+    height: 5rem;
+    color: var(--text-secondary);
     cursor: pointer;
 
     @media (max-width: 500px) {

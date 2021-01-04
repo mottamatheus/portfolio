@@ -11,6 +11,7 @@ export const english = {
     'Send message',
     'Contact',
   ],
+  cta: 'Check out my projects',
   projectsName: 'Projects',
   gopets:
     'GoPets is a bath and grooming scheduling platform for pet shops. When logged the user can see in his dashboard which appointments he has for the day and the available slots, making it easier for pet shops to organize their staff. Customers can also register their pets and make appointments through the platform.',
@@ -35,4 +36,5 @@ export const portuguese = {
     'Enviar mensagem',
     'Contato',
   ],
+  ctaPT: 'Confira meus projetos',
 };

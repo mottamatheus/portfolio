@@ -18,8 +18,8 @@ import Button from '../Button';
 
 const Header: React.FC = () => {
   const { locale } = useRouter();
-  const { position, headline } = english;
-  const { positionPT, headlinePT } = portuguese;
+  const { position, headline, cta } = english;
+  const { positionPT, headlinePT, ctaPT } = portuguese;
 
   return (
     <Container>
@@ -33,23 +33,23 @@ const Header: React.FC = () => {
         <p>{locale === 'en' ? headline : headlinePT}</p>
         <Technologies>
           <span>
-            <FaReact size={55} />
+            <FaReact className="react" size={55} />
             <p>ReactJS</p>
           </span>
           <span>
-            <SiTypescript size={47} />
+            <SiTypescript className="typescript" size={47} />
             <p>TypeScript</p>
           </span>
           <span>
-            <SiNextDotJs size={47} />
+            <SiNextDotJs className="next" size={47} />
             <p>Next.js</p>
           </span>
           <span>
-            <FaJs size={50} />
+            <FaJs className="javascript" size={50} />
             <p>JavaScript</p>
           </span>
           <span>
-            <FaNodeJs size={47} />
+            <FaNodeJs className="node" size={47} />
             <p>Node.js</p>
           </span>
         </Technologies>
@@ -79,6 +79,7 @@ const Header: React.FC = () => {
             duration: 1,
           }}
         >
+          {locale === 'en' ? cta : ctaPT}
           <IoIosArrowForward />
         </Scroll>
       </Link>
