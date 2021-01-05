@@ -2,8 +2,16 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
 export const Container = styled.div`
-  width: 80vw;
   max-width: 120rem;
+  width: 80vw;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+`;
+
+export const ProjectsContainer = styled.div`
   margin: 0 auto;
   display: flex;
   flex-direction: row;

@@ -1,7 +1,14 @@
 import React from 'react';
 import { FiGithub, FiExternalLink } from 'react-icons/fi';
 import { useRouter } from 'next/router';
-import { Title, Container, ImageDiv, About, ExternalLink } from './styles';
+import {
+  Container,
+  Title,
+  ProjectsContainer,
+  ImageDiv,
+  About,
+  ExternalLink,
+} from './styles';
 import { english, portuguese } from '../../languages';
 import siberianImg from '../../assets/siberian.png';
 import skilldevImg from '../../assets/skilldev.png';
@@ -68,11 +75,16 @@ const Projects: React.FC = () => {
     },
   ];
   return (
-    <>
+    <Container>
       <Title>{locale === 'en' ? projectsName : 'Meus projetos'}</Title>
+      <p>
+        Selecionei alguns projetos de destaque que desenvolvi. Pretendo
+        atualizar e adicionar novos projetos conforme for fazendo. Você pode dar
+        uma olhada no que ando desenvolvendo no meu Github.
+      </p>
       {projects.map((project, index) =>
         index % 2 === 0 ? (
-          <Container
+          <ProjectsContainer
             key={project.id}
             style={{
               justifyContent: 'flex-end',
@@ -115,9 +127,9 @@ const Projects: React.FC = () => {
                 <FiExternalLink size={75} />
               </ExternalLink>
             </ImageDiv>
-          </Container>
+          </ProjectsContainer>
         ) : (
-          <Container
+          <ProjectsContainer
             key={project.id}
             style={{
               justifyContent: 'flex-start',
@@ -160,10 +172,10 @@ const Projects: React.FC = () => {
                 <FiExternalLink size={75} />
               </ExternalLink>
             </ImageDiv>
-          </Container>
+          </ProjectsContainer>
         ),
       )}
-    </>
+    </Container>
   );
 };
 
