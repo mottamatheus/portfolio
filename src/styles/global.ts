@@ -9,8 +9,8 @@ export default createGlobalStyle`
     --text-secondary: #eb3b5a;
     --image-shade: linear-gradient(
         0deg,
-        rgba(235, 59, 90, 0.12),
-        rgba(235, 59, 90, 0.12)
+        rgba(235, 59, 90, 0.06),
+        rgba(235, 59, 90, 0.06)
       );
   }
 

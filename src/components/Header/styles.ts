@@ -56,22 +56,7 @@ export const TextSection = styled(motion.div)`
     }
 
     @media (max-width: 1000px) {
-      top: 10%;
-      width: 90%;
-
-      h1 {
-        font-size: 3rem;
-      }
-
-      h2 {
-        font-size: 1.4rem;
-      }
-
-      p {
-        font-size: 1.2rem;
-        width: 75%;
-        line-height: 1.7rem;
-      }
+      width: 100%;
     }
 
     span {
@@ -115,23 +100,15 @@ export const MeSection = styled(motion.div)`
 
   @media (max-width: 1000px) {
     position: absolute;
+    visibility: hidden;
     opacity: 1;
-    top: 15%;
+    top: 0;
     transition: all 0.2s ease;
+    z-index: -1;
 
     img {
       opacity: 0.1;
       width: 100%;
-    }
-
-    svg {
-      width: 6.5rem;
-      height: 6.5rem;
-
-      @media (max-width: 500px) {
-        width: 4.2rem;
-        height: 4.2rem;
-      }
     }
   }
 `;
@@ -175,12 +152,6 @@ export const Technologies = styled(motion.div)`
       color: #83ba63;
     }
 
-    @media (max-width: 500px) {
-      svg {
-        display: inline-block;
-      }
-    }
-
     p {
       font-size: 1.4rem;
       margin-top: 0.7rem;
@@ -196,6 +167,7 @@ export const Technologies = styled(motion.div)`
 
 export const Scroll = styled(motion.div)`
   position: absolute;
+  cursor: pointer;
   font-size: 2rem;
   color: var(--text-primary);
   z-index: 7;
@@ -210,10 +182,5 @@ export const Scroll = styled(motion.div)`
     height: 5rem;
     color: var(--text-secondary);
     cursor: pointer;
-
-    @media (max-width: 500px) {
-      width: 6rem;
-      height: 6rem;
-    }
   }
 `;

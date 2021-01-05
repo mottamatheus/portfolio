@@ -27,6 +27,7 @@ const Header: React.FC = () => {
         initial={{ x: -250, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
         transition={{ delay: 0.1, type: 'spring', stiffness: 120 }}
+        exit={{ opacity: 0 }}
       >
         <h1>Matheus Motta</h1>
         <h3>{locale === 'en' ? position : positionPT}</h3>
