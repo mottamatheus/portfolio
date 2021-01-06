@@ -11,14 +11,6 @@ export const Container = styled.div`
   justify-content: center;
 `;
 
-export const ProjectsContainer = styled.div`
-  margin: 0 auto;
-  display: flex;
-  flex-direction: row;
-  position: relative;
-  margin-bottom: 7rem;
-`;
-
 export const Title = styled.h2`
   font-size: 4rem;
   text-align: center;
@@ -30,6 +22,20 @@ export const Title = styled.h2`
   @media (max-width: 500px) {
     font-size: 3rem;
   }
+`;
+
+export const Text = styled.p`
+  text-align: center;
+  width: 80%;
+  margin-bottom: 5rem;
+`;
+
+export const ProjectsContainer = styled.div`
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  margin-bottom: 7rem;
 `;
 
 export const ImageDiv = styled(motion.a)`

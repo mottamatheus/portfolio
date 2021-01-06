@@ -4,6 +4,7 @@ import { useRouter } from 'next/router';
 import {
   Container,
   Title,
+  Text,
   ProjectsContainer,
   ImageDiv,
   About,
@@ -77,11 +78,11 @@ const Projects: React.FC = () => {
   return (
     <Container>
       <Title>{locale === 'en' ? projectsName : 'Meus projetos'}</Title>
-      <p>
+      <Text>
         Selecionei alguns projetos de destaque que desenvolvi. Pretendo
         atualizar e adicionar novos projetos conforme for fazendo. Você pode dar
         uma olhada no que ando desenvolvendo no meu Github.
-      </p>
+      </Text>
       {projects.map((project, index) =>
         index % 2 === 0 ? (
           <ProjectsContainer
