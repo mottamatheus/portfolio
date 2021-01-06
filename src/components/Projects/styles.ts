@@ -16,7 +16,7 @@ export const Title = styled.h2`
   text-align: center;
   padding-bottom: 6rem;
   margin: 0 auto;
-  margin-top: 10rem;
+  margin-top: 12rem;
   color: var(--text-secondary);
 
   @media (max-width: 500px) {
