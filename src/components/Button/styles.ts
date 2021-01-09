@@ -3,7 +3,6 @@ import { motion } from 'framer-motion';
 
 export const Container = styled(motion.div)`
   position: absolute;
-  z-index: 4;
   transition: all 0.2s ease;
 
   a {

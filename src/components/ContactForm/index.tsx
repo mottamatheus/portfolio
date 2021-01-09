@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { useRouter } from 'next/router';
 import { english, portuguese } from '../../languages';
-import { Container, Title, Form } from './styles';
+import { Container, Title, Form, Bubble } from './styles';
 
 const ContactForm: React.FC = () => {
   const { locale } = useRouter();
@@ -116,6 +116,7 @@ const ContactForm: React.FC = () => {
         />
         <button type="submit">{locale === 'en' ? form[4] : formPT[4]}</button>
       </Form>
+      <Bubble />
     </Container>
   );
 };

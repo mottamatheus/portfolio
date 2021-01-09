@@ -3,13 +3,12 @@ import styled from 'styled-components';
 export const Container = styled.div`
   display: flex;
   width: 100vw;
-  height: 5vh;
+  height: 10vh;
   align-items: center;
-  background-color: var(--bg-card);
+  color: var(--text-primary);
   justify-content: center;
   margin: auto;
-  font-size: 1.6rem;
-  font-family: 'Roboto Mono', monospace;
+  font-size: 1.8rem;
 `;
 
 export const Content = styled.div`
@@ -23,6 +22,7 @@ export const Content = styled.div`
 export const Links = styled.div`
   span,
   a {
+    font-weight: 600;
     margin-right: 3rem;
     cursor: pointer;
     transition: color 0.2s ease;

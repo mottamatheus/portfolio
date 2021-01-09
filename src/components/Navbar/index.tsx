@@ -40,7 +40,7 @@ const Navbar: React.FC = () => {
           <span>ES</span>
         </Languages> */}
 
-        <Switch
+        {/* <Switch
           checked
           checkedIcon={
             <div
@@ -75,7 +75,7 @@ const Navbar: React.FC = () => {
           onColor="#eb3b5a"
           offColor="#eceaea"
           onChange={() => console.log('oi, mottinha')}
-        />
+        /> */}
       </Content>
     </Container>
   );

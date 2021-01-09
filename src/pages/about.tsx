@@ -1,5 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
+import Hero from '../components/Hero';
 
 const About: React.FC = () => {
   return (
@@ -7,7 +8,9 @@ const About: React.FC = () => {
       <Head>
         <title>Matheus Motta | Sobre Mim</title>
       </Head>
-      <main />
+      <main>
+        <Hero />
+      </main>
     </div>
   );
 };

@@ -4,14 +4,19 @@ export default createGlobalStyle`
   :root {
     font-size: 62.5%;
     --bg: #191c1c;
-    --bg-card: #2a2e2e;
-    --text-primary: #dfe3f2;
-    --text-secondary: #eb3b5a;
+    --bg-card: #dfe3f2;
+    --text-primary: #2C3A47;
+    --text-secondary: #B33771;
     --image-shade: linear-gradient(
         0deg,
-        rgba(235, 59, 90, 0.06),
-        rgba(235, 59, 90, 0.06)
+        rgba(179, 55, 161, 0.1),
+        rgba(179, 55, 161, 0.1)
       );
+    --gradient:  linear-gradient(
+      -45deg,
+      rgba(179, 55, 113, 0.85),
+      rgba(179, 55, 161, 0.85)
+    );
   }
 
   * {
@@ -28,7 +33,32 @@ export default createGlobalStyle`
     overflow-y: overlay;
     font-family: 'Inter', sans-serif;
     color: var(--text-primary);
-    background: var(--bg)
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 40 40'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%232c3131' fill-opacity='0.21'%3E%3Cpath d='M0 38.59l2.83-2.83 1.41 1.41L1.41 40H0v-1.41zM0 1.4l2.83 2.83 1.41-1.41L1.41 0H0v1.41zM38.59 40l-2.83-2.83 1.41-1.41L40 38.59V40h-1.41zM40 1.41l-2.83 2.83-1.41-1.41L38.59 0H40v1.41zM20 18.6l2.83-2.83 1.41 1.41L21.41 20l2.83 2.83-1.41 1.41L20 21.41l-2.83 2.83-1.41-1.41L18.59 20l-2.83-2.83 1.41-1.41L20 18.59z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-  }
+    position: relative;
+    background: linear-gradient(-45deg, #c4bade, #e6f1ff, #ffebfe);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite; }
+
+    @keyframes gradient {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 70% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+    body::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='10 10 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%239C92AC' fill-opacity='0.22' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='3'/%3E%3Ccircle cx='13' cy='13' r='3'/%3E%3C/g%3E%3C/svg%3E");
+      z-index: -1;
+    }
+
 `;

@@ -16,7 +16,7 @@ export const Title = styled.h2`
   text-align: center;
   padding-bottom: 6rem;
   margin: 0 auto;
-  margin-top: 12rem;
+  margin-top: 6rem;
   color: var(--text-secondary);
 
   @media (max-width: 500px) {
@@ -41,10 +41,10 @@ export const ProjectsContainer = styled.div`
 export const ImageDiv = styled(motion.a)`
   width: 60%;
   position: absolute;
-  border-radius: 0.3rem;
+  border-radius: 1rem;
   z-index: 1;
   height: 35rem;
-  box-shadow: 5px 6px 8px -4px rgba(0, 0, 0, 0.37);
+  box-shadow: 2px 8px 16px 0 rgba(149, 11, 247, 0.05);
   min-height: 100%;
   background-size: cover;
   background-size: contain auto;
@@ -100,14 +100,13 @@ export const About = styled.div`
 
   p {
     font-size: 1.7rem;
-    font-weight: 300;
     color: var(--text-primary);
-    border-radius: 0.3rem;
+    border-radius: 1rem;
     margin-bottom: 2rem;
     padding: 3rem;
     backdrop-filter: blur(4px);
-    background-color: rgba(42, 46, 46, 0.7);
-    box-shadow: 5px 6px 8px -4px rgba(0, 0, 0, 0.37);
+    background: rgba(255, 255, 255, 0.65);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.17);
 
     @media (max-width: 1150px) {
       color: var(--text-primary);
