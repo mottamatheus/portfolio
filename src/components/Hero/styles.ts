@@ -114,6 +114,44 @@ export const Bubble = styled(motion.div)`
   }
 `;
 
+export const Linkedin = styled(motion.div)`
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 15rem;
+  right: 1rem;
+  border-radius: 50%;
+  width: 9rem;
+  height: 9rem;
+  background: rgba(255, 255, 255, 0.2);
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 10px 8px 32px 0 rgba(179, 55, 113, 0.12);
+  backdrop-filter: blur(1rem);
+  z-index: 1;
+  align-items: center;
+  justify-content: center;
+`;
+
+export const Github = styled(motion.div)`
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 24rem;
+  right: -5rem;
+  border-radius: 50%;
+  width: 9rem;
+  height: 9rem;
+  background: rgba(255, 255, 255, 0.4);
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 10px 8px 32px 0 rgba(179, 55, 113, 0.12);
+  backdrop-filter: blur(1rem);
+  z-index: 1;
+  align-items: center;
+  justify-content: center;
+`;
+
 export const Technologies = styled(motion.div)`
   color: var(--text-primary);
   width: 40%;

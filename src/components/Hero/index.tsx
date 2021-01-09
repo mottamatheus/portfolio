@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { FaJs, FaReact, FaNodeJs } from 'react-icons/fa';
+import { FaJs, FaReact, FaNodeJs, FaLinkedin, FaGithub } from 'react-icons/fa';
 import { SiTypescript, SiNextDotJs } from 'react-icons/si';
 import { IoIosArrowForward } from 'react-icons/io';
 import { english, portuguese } from '../../languages';
@@ -13,7 +13,8 @@ import {
   TextSection,
   MeSection,
   Technologies,
-  Scroll,
+  Linkedin,
+  Github,
 } from './styles';
 import Button from '../Button';
 
@@ -86,6 +87,28 @@ const Hero: React.FC = () => {
             <IoIosArrowForward size={25} />
           </Bubble>
         </Link>
+        <Linkedin
+          whileHover={{
+            scale: 1.1,
+            transition: {
+              yoyo: Infinity,
+            },
+          }}
+          whileTap={{ scale: 0.9 }}
+        >
+          <FaLinkedin size={50} />
+        </Linkedin>
+        <Github
+          whileHover={{
+            scale: 1.1,
+            transition: {
+              yoyo: Infinity,
+            },
+          }}
+          whileTap={{ scale: 0.9 }}
+        >
+          <FaGithub size={50} />
+        </Github>
       </MeSection>
     </Container>
   );
