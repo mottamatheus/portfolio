@@ -2,7 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import Hero from '../components/Hero';
 
-const Home: React.FC = () => {
+export const Home: React.FC = () => {
   return (
     <div>
       <Head>

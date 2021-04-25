@@ -1,44 +1,44 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { FaJs, FaReact, FaNodeJs, FaLinkedin, FaGithub } from 'react-icons/fa';
 import { SiTypescript, SiNextDotJs } from 'react-icons/si';
 import { IoIosArrowForward } from 'react-icons/io';
+
 import { english, portuguese } from '../../languages';
 import {
-  Bubble,
+  Button,
   Container,
   TextSection,
   MeSection,
   Technologies,
-  Linkedin,
+  SocialButton,
   Github,
 } from './styles';
-import Button from '../Button';
 
 const Hero: React.FC = () => {
   const { locale } = useRouter();
-  const { position, headline, cta } = english;
-  const { positionPT, headlinePT, ctaPT } = portuguese;
+  const { position, headline } = english;
+  const { positionPT, headlinePT } = portuguese;
 
   return (
     <Container>
       <TextSection
         initial={{ x: -250, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
-        transition={{ delay: 0.1, type: 'spring', stiffness: 120 }}
+        transition={{ delay: 1, type: 'spring', stiffness: 120 }}
         exit={{ opacity: 0 }}
       >
         <h1>Matheus Motta</h1>
+
         <h3>{locale === 'en' ? position : positionPT}</h3>
         <p>{locale === 'en' ? headline : headlinePT}</p>
       </TextSection>
       <Technologies
         initial={{ x: -250, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
-        transition={{ delay: 0.1, type: 'spring', stiffness: 120 }}
+        transition={{ delay: 1, type: 'spring', stiffness: 120 }}
         exit={{ opacity: 0 }}
       >
         <span>
@@ -65,11 +65,11 @@ const Hero: React.FC = () => {
       <MeSection
         initial={{ y: -35, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        transition={{ delay: 1, type: 'spring', stiffness: 120 }}
+        transition={{ delay: 0.1, type: 'spring', stiffness: 120 }}
       >
         <Image src="/me2.png" alt="me" width={453} height={620} />
         <Link href="/projects">
-          <Bubble
+          <Button
             initial={{ visibility: 'hidden', opacity: 0 }}
             animate={{
               visibility: 'visible',
@@ -85,9 +85,9 @@ const Hero: React.FC = () => {
           >
             <p>Meus projetos</p>
             <IoIosArrowForward size={25} />
-          </Bubble>
+          </Button>
         </Link>
-        <Linkedin
+        <SocialButton
           whileHover={{
             scale: 1.1,
             transition: {
@@ -97,8 +97,18 @@ const Hero: React.FC = () => {
           whileTap={{ scale: 0.9 }}
         >
           <FaLinkedin size={50} />
-        </Linkedin>
+        </SocialButton>
         <Github
+          href="www.google.com"
+          initial={{ visibility: 'hidden', opacity: 0 }}
+          animate={{
+            visibility: 'visible',
+            opacity: 1,
+          }}
+          transition={{
+            opacity: 1,
+            delay: 2.5,
+          }}
           whileHover={{
             scale: 1.1,
             transition: {

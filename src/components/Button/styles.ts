@@ -4,10 +4,12 @@ import { motion } from 'framer-motion';
 export const Container = styled(motion.div)`
   position: absolute;
   transition: all 0.2s ease;
+  backface-visibility: hidden;
 
   a {
     color: var(--text-primary);
     transition: all 0.2s ease;
+    backface-visibility: hidden;
 
     &:hover {
       color: var(--text-secondary);

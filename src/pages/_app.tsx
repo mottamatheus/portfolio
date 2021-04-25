@@ -1,21 +1,18 @@
 import React from 'react';
 import { AppProps } from 'next/app';
-import { AnimateSharedLayout } from 'framer-motion';
-import { ThemeProvider } from 'styled-components';
+import { AnimateSharedLayout, LazyMotion, domMax } from 'framer-motion';
 import GlobalStyle from '../styles/global';
-import theme from '../styles/themes';
-import Navbar from '../components/Navbar';
+import Navbar from '../components/Header';
 
 const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
   return (
-    <>
-      <ThemeProvider theme={theme}>
+    <AnimateSharedLayout>
+      <LazyMotion features={domMax}>
         <Navbar />
-      </ThemeProvider>
-      <Component {...pageProps} />
-
-      <GlobalStyle />
-    </>
+        <Component {...pageProps} />
+        <GlobalStyle />
+      </LazyMotion>
+    </AnimateSharedLayout>
   );
 };
 

@@ -86,7 +86,7 @@ export const MeSection = styled(motion.div)`
   }
 `;
 
-export const Bubble = styled(motion.div)`
+export const Button = styled(motion.div)`
   cursor: pointer;
   display: flex;
   flex-direction: column;
@@ -98,9 +98,9 @@ export const Bubble = styled(motion.div)`
   width: 11rem;
   height: 11rem;
   background: linear-gradient(
-    -45deg,
-    rgba(179, 55, 113, 0.85),
-    rgba(179, 55, 161, 0.85)
+    -35deg,
+    rgba(140, 111, 247, 0.7),
+    rgba(255, 34, 102, 0.7)
   );
   box-shadow: 10px 8px 32px 0 rgba(179, 55, 113, 0.12),
     inset 0 2px 3px rgba(181, 123, 173, 0.8);
@@ -114,7 +114,7 @@ export const Bubble = styled(motion.div)`
   }
 `;
 
-export const Linkedin = styled(motion.div)`
+export const SocialButton = styled(motion.a)`
   cursor: pointer;
   display: flex;
   flex-direction: column;
@@ -131,9 +131,11 @@ export const Linkedin = styled(motion.div)`
   z-index: 1;
   align-items: center;
   justify-content: center;
+  outline: none;
+  border: none;
 `;
 
-export const Github = styled(motion.div)`
+export const Github = styled(motion.a)`
   cursor: pointer;
   display: flex;
   flex-direction: column;
@@ -154,7 +156,7 @@ export const Github = styled(motion.div)`
 
 export const Technologies = styled(motion.div)`
   color: var(--text-primary);
-  width: 40%;
+  width: 35%;
   min-width: fit-content;
   padding: 2rem;
   background: rgba(255, 255, 255, 0.5);
@@ -166,7 +168,7 @@ export const Technologies = styled(motion.div)`
   display: flex;
   position: absolute;
   bottom: 13rem;
-  right: 2rem;
+  right: 10rem;
   justify-content: center;
   align-items: flex-end;
   color: var(--text-primary);
@@ -175,7 +177,7 @@ export const Technologies = styled(motion.div)`
 
   span {
     text-align: center;
-    margin-right: 2rem;
+    margin-right: 1.5rem;
     justify-content: center;
     transition: all 0.3s ease;
 
