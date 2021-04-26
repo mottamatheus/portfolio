@@ -97,10 +97,4 @@ export const Bubble = styled.div`
   );
   box-shadow: 10px 8px 32px 0 rgba(179, 55, 113, 0.1);
   z-index: -1;
-  align-items: center;
-  justify-content: center;
-
-  p {
-    margin-bottom: 0.4rem;
-  }
 `;

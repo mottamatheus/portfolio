@@ -25,10 +25,10 @@ const Hero: React.FC = () => {
   return (
     <Container>
       <TextSection
-        initial={{ x: -250, opacity: 0 }}
-        animate={{ x: 0, opacity: 1 }}
-        transition={{ delay: 1, type: 'spring', stiffness: 120 }}
-        exit={{ opacity: 0 }}
+      // initial={{ x: -250, opacity: 0 }}
+      // animate={{ x: 0, opacity: 1 }}
+      // transition={{ delay: 1, type: 'spring', stiffness: 120 }}
+      // exit={{ opacity: 0 }}
       >
         <h1>Matheus Motta</h1>
 
@@ -36,10 +36,10 @@ const Hero: React.FC = () => {
         <p>{locale === 'en' ? headline : headlinePT}</p>
       </TextSection>
       <Technologies
-        initial={{ x: -250, opacity: 0 }}
-        animate={{ x: 0, opacity: 1 }}
-        transition={{ delay: 1, type: 'spring', stiffness: 120 }}
-        exit={{ opacity: 0 }}
+      // initial={{ x: -250, opacity: 0 }}
+      // animate={{ x: 0, opacity: 1 }}
+      // transition={{ delay: 1, type: 'spring', stiffness: 120 }}
+      // exit={{ opacity: 0 }}
       >
         <span>
           <FaReact className="react" size={55} />
@@ -63,9 +63,9 @@ const Hero: React.FC = () => {
         </span>
       </Technologies>
       <MeSection
-        initial={{ y: -35, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ delay: 0.1, type: 'spring', stiffness: 120 }}
+      // initial={{ y: -35, opacity: 0 }}
+      // animate={{ y: 0, opacity: 1 }}
+      // transition={{ delay: 0.1, type: 'spring', stiffness: 120 }}
       >
         <Image src="/me2.png" alt="me" width={453} height={620} />
         <Link href="/projects">
@@ -99,7 +99,9 @@ const Hero: React.FC = () => {
           <FaLinkedin size={50} />
         </SocialButton>
         <Github
-          href="www.google.com"
+          href="https://github.com/mottamatheus/"
+          rel="noreferrer"
+          target="_blank"
           initial={{ visibility: 'hidden', opacity: 0 }}
           animate={{
             visibility: 'visible',

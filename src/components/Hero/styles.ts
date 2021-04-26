@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 
 export const Container = styled.div`
   height: 90vh;
@@ -14,7 +14,7 @@ export const Container = styled.div`
   position: relative;
 `;
 
-export const TextSection = styled(motion.div)`
+export const TextSection = styled(m.div)`
   color: var(--text-primary);
   width: 45rem;
   top: 25rem;
@@ -49,7 +49,7 @@ export const TextSection = styled(motion.div)`
   }
 `;
 
-export const MeSection = styled(motion.div)`
+export const MeSection = styled(m.div)`
   text-align: center;
   display: flex;
   align-items: flex-end;
@@ -86,7 +86,7 @@ export const MeSection = styled(motion.div)`
   }
 `;
 
-export const Button = styled(motion.div)`
+export const Button = styled(m.div)`
   cursor: pointer;
   display: flex;
   flex-direction: column;
@@ -114,7 +114,7 @@ export const Button = styled(motion.div)`
   }
 `;
 
-export const SocialButton = styled(motion.a)`
+export const SocialButton = styled(m.a)`
   cursor: pointer;
   display: flex;
   flex-direction: column;
@@ -135,7 +135,7 @@ export const SocialButton = styled(motion.a)`
   border: none;
 `;
 
-export const Github = styled(motion.a)`
+export const Github = styled(m.a)`
   cursor: pointer;
   display: flex;
   flex-direction: column;
@@ -154,7 +154,7 @@ export const Github = styled(motion.a)`
   justify-content: center;
 `;
 
-export const Technologies = styled(motion.div)`
+export const Technologies = styled(m.div)`
   color: var(--text-primary);
   width: 35%;
   min-width: fit-content;
@@ -217,7 +217,7 @@ export const Technologies = styled(motion.div)`
   }
 `;
 
-export const Scroll = styled(motion.div)`
+export const Scroll = styled(m.div)`
   position: absolute;
   cursor: pointer;
   font-size: 2rem;

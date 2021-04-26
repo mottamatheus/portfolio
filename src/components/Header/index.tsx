@@ -8,40 +8,49 @@ import { english, portuguese } from '../../languages/index';
 import { Container, Content, LinksList, Underline } from './styles';
 
 const Navbar: React.FC = () => {
-  const linkRef = useRef(false);
-  const { locale } = useRouter();
+  const ref = useRef();
+  const { locale, pathname } = useRouter();
   const { navbar } = english;
   const { navbarPT } = portuguese;
+  // const { current } = linkRef;
 
-  const [active, setActive] = useState(false);
+  const [active, setActive] = useState('');
 
-  useEffect(() => {
-    setActive(true);
-  }, []);
+  const handleActive = useEffect(() => {
+    setActive(pathname);
+    console.log(pathname);
+  }, [pathname]);
 
-  const handleActive = () => {
-    const { current } = linkRef;
-    setActive(true);
-    console.log(active);
-  };
+  const pathNames = ['/', '/projects', '/contact'];
 
   return (
     <Container>
       <Content>
         <LinksList>
           <Link passHref href="/">
-            <a role="presentation" onClick={handleActive}>
+            <a onClick={() => handleActive} role="presentation">
               Home
-              <Underline />
+              {active === '/' ? <Underline layoutId="underline" /> : null}
+              <m.span layoutId="underline" />
             </a>
           </Link>
           <Link href="/projects">
-            <a role="presentation" onClick={handleActive}>
+            <a onClick={() => handleActive} role="presentation">
               Projects
-              <Underline />
+              {active === '/projects' ? (
+                <Underline layoutId="underline" />
+              ) : null}
+              <m.span layoutId="underline" />
             </a>
           </Link>
-          <Link href="/contact">Contact</Link>
+          <Link href="/contact">
+            <a onClick={() => handleActive} role="presentation">
+              Contact
+              {active === '/contact' ? (
+                <Underline layoutId="underline" />
+              ) : null}
+            </a>
+          </Link>
         </LinksList>
       </Content>
     </Container>

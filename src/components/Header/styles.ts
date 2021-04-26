@@ -1,4 +1,9 @@
 import styled from 'styled-components';
+import { m } from 'framer-motion';
+
+type UnderLineProps = {
+  active: boolean,
+};
 
 export const Container = styled.div`
   display: flex;
@@ -33,13 +38,22 @@ export const LinksList = styled.div`
     &:hover {
       color: var(--text-secondary);
     }
+
+    .underline {
+      position: absolute;
+      width: 100%;
+      background: red;
+      height: 2px;
+      left: 0;
+      bottom: -15%;
+    }
   }
 `;
 
-export const Underline = styled.span`
+export const Underline = styled(m.span)`
   position: absolute;
   width: 100%;
-  background: blue;
+  background: green;
   height: 2px;
   left: 0;
   bottom: -15%;
