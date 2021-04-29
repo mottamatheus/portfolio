@@ -2,7 +2,8 @@ import styled from 'styled-components';
 import { m } from 'framer-motion';
 
 type UnderLineProps = {
-  active: boolean,
+  active: string,
+  pathname: string,
 };
 
 export const Container = styled.div`
@@ -50,10 +51,15 @@ export const LinksList = styled.div`
   }
 `;
 
-export const Underline = styled(m.span)`
+export const Underline =
+  styled(m.span) <
+  UnderLineProps >
+  `
+  visibility: ${props =>
+    props.active === props.pathname ? 'visible' : 'hidden'};
   position: absolute;
   width: 100%;
-  background: green;
+  background: var(--text-secondary);
   height: 2px;
   left: 0;
   bottom: -15%;

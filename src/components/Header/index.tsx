@@ -30,25 +30,32 @@ const Navbar: React.FC = () => {
           <Link passHref href="/">
             <a onClick={() => handleActive} role="presentation">
               Home
-              {active === '/' ? <Underline layoutId="underline" /> : null}
+              <Underline
+                pathname={pathname}
+                active={active}
+                layoutId="underline"
+              />
               <m.span layoutId="underline" />
             </a>
           </Link>
           <Link href="/projects">
             <a onClick={() => handleActive} role="presentation">
               Projects
-              {active === '/projects' ? (
-                <Underline layoutId="underline" />
-              ) : null}
-              <m.span layoutId="underline" />
+              <Underline
+                pathname={pathname}
+                active={active}
+                layoutId="underline"
+              />
             </a>
           </Link>
           <Link href="/contact">
             <a onClick={() => handleActive} role="presentation">
               Contact
-              {active === '/contact' ? (
-                <Underline layoutId="underline" />
-              ) : null}
+              <Underline
+                pathname={pathname}
+                active={active}
+                layoutId="underline"
+              />
             </a>
           </Link>
         </LinksList>
