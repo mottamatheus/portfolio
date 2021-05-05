@@ -24,23 +24,13 @@ const Hero: React.FC = () => {
 
   return (
     <Container>
-      <TextSection
-      // initial={{ x: -250, opacity: 0 }}
-      // animate={{ x: 0, opacity: 1 }}
-      // transition={{ delay: 1, type: 'spring', stiffness: 120 }}
-      // exit={{ opacity: 0 }}
-      >
+      <TextSection>
         <h1>Matheus Motta</h1>
 
         <h3>{locale === 'en' ? position : positionPT}</h3>
         <p>{locale === 'en' ? headline : headlinePT}</p>
       </TextSection>
-      <Technologies
-      // initial={{ x: -250, opacity: 0 }}
-      // animate={{ x: 0, opacity: 1 }}
-      // transition={{ delay: 1, type: 'spring', stiffness: 120 }}
-      // exit={{ opacity: 0 }}
-      >
+      <Technologies>
         <span>
           <FaReact className="react" size={55} />
           <p>React</p>
@@ -62,11 +52,7 @@ const Hero: React.FC = () => {
           <p>Node.js</p>
         </span>
       </Technologies>
-      <MeSection
-      // initial={{ y: -35, opacity: 0 }}
-      // animate={{ y: 0, opacity: 1 }}
-      // transition={{ delay: 0.1, type: 'spring', stiffness: 120 }}
-      >
+      <MeSection>
         <Image src="/me2.png" alt="me" width={453} height={620} />
         <Link href="/projects">
           <Button

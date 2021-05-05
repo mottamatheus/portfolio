@@ -21,6 +21,8 @@ const Navbar: React.FC = () => {
     console.log(pathname);
   }, [pathname]);
 
+  const MotionLink = m(Link);
+
   const pathNames = ['/', '/projects', '/contact'];
 
   return (
