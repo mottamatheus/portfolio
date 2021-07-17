@@ -2,10 +2,6 @@
 import React from 'react';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
-import Switch from 'react-switch';
-import { RiMoonFill } from 'react-icons/ri';
-import { HiSun } from 'react-icons/hi';
-import { Dropdown } from 'semantic-ui-react';
 import { english, portuguese } from '../../languages/index';
 
 import { Container, Content, Links } from './styles';
@@ -34,48 +30,6 @@ const Navbar: React.FC = () => {
             <span>{locale === 'en' ? navbar[2] : navbarPT[2]}</span>
           </Link>
         </Links>
-        {/* <Languages>
-          <span className="portuguese">PT</span>
-          <span>EN</span>
-          <span>ES</span>
-        </Languages> */}
-
-        {/* <Switch
-          checked
-          checkedIcon={
-            <div
-              style={{
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-                height: '100%',
-                fontSize: 20,
-              }}
-            >
-              <RiMoonFill />
-            </div>
-          }
-          uncheckedIcon={
-            <div
-              style={{
-                color: '#2a2e2e',
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-                height: '100%',
-                fontSize: 20,
-              }}
-            >
-              <HiSun />
-            </div>
-          }
-          handleDiameter={30}
-          height={28}
-          width={55}
-          onColor="#eb3b5a"
-          offColor="#eceaea"
-          onChange={() => console.log('oi, mottinha')}
-        /> */}
       </Content>
     </Container>
   );
