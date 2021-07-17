@@ -14,7 +14,7 @@ export const Container = styled.div`
   position: relative;
 `;
 
-export const TextSection = styled(motion.div)`
+export const TextSection = styled.div`
   color: var(--text-primary);
   width: 45rem;
   top: 25rem;
@@ -49,7 +49,7 @@ export const TextSection = styled(motion.div)`
   }
 `;
 
-export const MeSection = styled(motion.div)`
+export const MeSection = styled.div`
   text-align: center;
   display: flex;
   align-items: flex-end;
@@ -114,8 +114,10 @@ export const Bubble = styled(motion.div)`
   }
 `;
 
-export const Linkedin = styled(motion.div)`
+export const Linkedin = styled(motion.a)`
   cursor: pointer;
+  color: var(--text-primary);
+  border: none;
   display: flex;
   flex-direction: column;
   position: absolute;
@@ -133,7 +135,9 @@ export const Linkedin = styled(motion.div)`
   justify-content: center;
 `;
 
-export const Github = styled(motion.div)`
+export const Github = styled(motion.a)`
+  border: none;
+  color: var(--text-primary);
   cursor: pointer;
   display: flex;
   flex-direction: column;
@@ -152,7 +156,7 @@ export const Github = styled(motion.div)`
   justify-content: center;
 `;
 
-export const Technologies = styled(motion.div)`
+export const Technologies = styled.div`
   color: var(--text-primary);
   width: 40%;
   min-width: fit-content;

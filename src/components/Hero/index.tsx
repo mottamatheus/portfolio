@@ -16,7 +16,6 @@ import {
   Linkedin,
   Github,
 } from './styles';
-import Button from '../Button';
 
 const Hero: React.FC = () => {
   const { locale } = useRouter();
@@ -25,22 +24,12 @@ const Hero: React.FC = () => {
 
   return (
     <Container>
-      <TextSection
-        initial={{ x: -250, opacity: 0 }}
-        animate={{ x: 0, opacity: 1 }}
-        transition={{ delay: 0.1, type: 'spring', stiffness: 120 }}
-        exit={{ opacity: 0 }}
-      >
+      <TextSection>
         <h1>Matheus Motta</h1>
         <h3>{locale === 'en' ? position : positionPT}</h3>
         <p>{locale === 'en' ? headline : headlinePT}</p>
       </TextSection>
-      <Technologies
-        initial={{ x: -250, opacity: 0 }}
-        animate={{ x: 0, opacity: 1 }}
-        transition={{ delay: 0.1, type: 'spring', stiffness: 120 }}
-        exit={{ opacity: 0 }}
-      >
+      <Technologies>
         <span>
           <FaReact className="react" size={55} />
           <p>React</p>
@@ -62,11 +51,7 @@ const Hero: React.FC = () => {
           <p>Node.js</p>
         </span>
       </Technologies>
-      <MeSection
-        initial={{ y: -35, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ delay: 1, type: 'spring', stiffness: 120 }}
-      >
+      <MeSection>
         <Image src="/me2.png" alt="me" width={453} height={620} />
         <Link href="/projects">
           <Bubble
@@ -78,7 +63,6 @@ const Hero: React.FC = () => {
             }}
             transition={{
               opacity: 1,
-              delay: 2.5,
               repeat: Infinity,
               duration: 1,
             }}
@@ -88,6 +72,9 @@ const Hero: React.FC = () => {
           </Bubble>
         </Link>
         <Linkedin
+          href="https://www.linkedin.com/in/motta-matheus/"
+          rel="noreferrer"
+          target="_blank"
           whileHover={{
             scale: 1.1,
             transition: {
@@ -99,6 +86,9 @@ const Hero: React.FC = () => {
           <FaLinkedin size={50} />
         </Linkedin>
         <Github
+          href="https://github.com/mottamatheus/"
+          rel="noreferrer"
+          target="_blank"
           whileHover={{
             scale: 1.1,
             transition: {
