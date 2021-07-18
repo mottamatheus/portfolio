@@ -2,7 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import Hero from '../components/Hero';
 
-const Home: React.FC = () => {
+export default function Home() {
   return (
     <div>
       <Head>
@@ -13,6 +13,4 @@ const Home: React.FC = () => {
       </main>
     </div>
   );
-};
-
-export default Home;
+}

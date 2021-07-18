@@ -1,18 +1,16 @@
 import React from 'react';
 import Head from 'next/head';
-import Projects from '../components/Projects';
+import MyProjects from '../components/Projects';
 
-const ProjectsPage: React.FC = () => {
+export default function Projects() {
   return (
     <div>
       <Head>
         <title>Matheus Motta | Projetos</title>
       </Head>
       <main>
-        <Projects />
+        <MyProjects />
       </main>
     </div>
   );
-};
-
-export default ProjectsPage;
+}

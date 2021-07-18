@@ -18,7 +18,6 @@ type StaticProps = {
 };
 
 export default function BlogPost({ title, description, keywords }: Props) {
-  console.log(title);
   return (
     <>
       <Head>
@@ -26,6 +25,7 @@ export default function BlogPost({ title, description, keywords }: Props) {
         <meta name="description" content={description} />
         <meta name="keywords" content={keywords} />
       </Head>
+      <h1>{title}</h1>
     </>
   );
 }
@@ -48,7 +48,7 @@ const allBlogPosts = gql`
 
 const singleBlogPost = (slug: string) => gql`
   {
-    allArticles {
+    allArticles(filter: {slug: {eq: "${slug}"}}) {
       createdAt
       title
       slug

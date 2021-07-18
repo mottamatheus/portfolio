@@ -1,22 +1,15 @@
 import React from 'react';
 import { AppProps } from 'next/app';
 import { AnimateSharedLayout } from 'framer-motion';
-import { ThemeProvider } from 'styled-components';
 import GlobalStyle from '../styles/global';
-import theme from '../styles/themes';
 import Navbar from '../components/Navbar';
 
-const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
+export default function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
-      <ThemeProvider theme={theme}>
-        <Navbar />
-      </ThemeProvider>
+      <Navbar />
       <Component {...pageProps} />
-
       <GlobalStyle />
     </>
   );
-};
-
-export default MyApp;
+}
