@@ -14,7 +14,6 @@ import {
   Technologies,
   Scroll,
 } from './styles';
-import Button from '../Button';
 
 const Header: React.FC = () => {
   const { locale } = useRouter();
@@ -65,9 +64,7 @@ const Header: React.FC = () => {
           initial={{ x: -135, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ delay: 2, type: 'spring', stiffness: 120 }}
-        >
-          <Button />
-        </motion.span>
+        ></motion.span>
       </MeSection>
       <Link href="/projects">
         <Scroll
