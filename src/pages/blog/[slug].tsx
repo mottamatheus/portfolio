@@ -1,7 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
 import { gql, request } from '../../utils/request';
-import { PostFragment } from '../../utils/fragments/post';
 
 type Props = {
   title: string;
@@ -32,7 +31,7 @@ export default function BlogPost({ title, description, keywords }: Props) {
 
 const allBlogPosts = gql`
   {
-    allArticles {
+    allArticles(first: 20) {
       createdAt
       title
       slug
@@ -48,7 +47,7 @@ const allBlogPosts = gql`
 
 const singleBlogPost = (slug: string) => gql`
   {
-    allArticles(filter: {slug: {eq: "${slug}"}}) {
+    allArticles(first: 1, filter: {slug: {eq: "${slug}"}}) {
       createdAt
       title
       slug
@@ -69,6 +68,7 @@ export async function getStaticPaths() {
     params: { slug },
   }));
 
+
   return {
     paths,
     fallback: false,
@@ -79,6 +79,8 @@ export async function getStaticProps({ params: { slug } }: StaticProps) {
   const {
     allArticles: [{ title, content }],
   } = await request(singleBlogPost(slug));
+
+  console.log(title);
 
   return {
     props: { title, content },

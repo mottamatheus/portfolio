@@ -4,7 +4,7 @@ const endpoint = `https://graphql.datocms.com/`;
 
 const graphQLClient = new GraphQLClient(endpoint, {
   headers: {
-    authorization: `Bearer 0390ede1af0fbb445b930545d44aad`,
+    authorization: `Bearer ${process.env.DATO_MANAGEMENT_TOKEN}`,
   },
 });
 

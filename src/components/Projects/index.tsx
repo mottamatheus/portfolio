@@ -1,5 +1,6 @@
 import React from 'react';
 import { FiGithub, FiExternalLink } from 'react-icons/fi';
+import Image from 'next/image';
 import { useRouter } from 'next/router';
 import {
   Container,
@@ -16,7 +17,9 @@ import skilldevImg from '../../assets/skilldev.png';
 import goPets from '../../assets/gopets.png';
 import elleosImg from '../../assets/elleos.png';
 
-const Projects: React.FC = () => {
+import styles from './projects.module.css';
+
+function Projects() {
   const { locale } = useRouter();
   const { gopets, skilldev, siberian, elleos, projectsName } = english;
   const projects = [
@@ -76,108 +79,117 @@ const Projects: React.FC = () => {
     },
   ];
   return (
-    <Container>
-      <Title>{locale === 'en' ? projectsName : 'Meus projetos'}</Title>
-      <Text>
-        Selecionei alguns projetos de destaque que desenvolvi. Pretendo
-        atualizar e adicionar novos projetos conforme for fazendo. Você pode dar
-        uma olhada no que ando desenvolvendo no meu Github.
-      </Text>
-      {projects.map((project, index) =>
-        index % 2 === 0 ? (
-          <ProjectsContainer
-            key={project.id}
-            style={{
-              justifyContent: 'flex-end',
-            }}
-          >
-            <About
-              style={{
-                textAlign: 'right',
-                alignItems: 'flex-end',
-              }}
+    <>
+      <div className={styles.container}>
+        {projects.map(project => (
+          <div className={styles.project} key={project.id}>
+            <div className={styles.image}>
+              <Image src={project.image} layout="fill" objectFit="cover" />
+            </div>
+            <div className={styles.about}>
+              <h2>{project.title}</h2>
+              <p className={styles.description}>{project.description}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+      <Container>
+        {projects.map((project, index) =>
+          index % 2 === 0 ? (
+            <ProjectsContainer
               key={project.id}
-            >
-              <h4>{project.title}</h4>
-              <p>{project.description}</p>
-              <ul>
-                {project.technologies.map(tech => (
-                  <li key={tech}>{tech}</li>
-                ))}
-              </ul>
-              <div>
-                <a target="_blank" rel="noreferrer" href={project.repository}>
-                  <FiGithub size={35} />
-                </a>
-                <a target="_blank" rel="noreferrer" href={project.website}>
-                  <FiExternalLink size={35} />
-                </a>
-              </div>
-            </About>
-            <ImageDiv
               style={{
-                left: 0,
-                backgroundImage: `var(--image-shade), url(${project.image})`,
+                justifyContent: 'flex-end',
               }}
-              href={project.website}
-              target="_blank"
-              rel="noreferrer"
-              whileHover={{ scale: 1.05 }}
             >
-              <ExternalLink>
-                <FiExternalLink size={75} />
-              </ExternalLink>
-            </ImageDiv>
-          </ProjectsContainer>
-        ) : (
-          <ProjectsContainer
-            key={project.id}
-            style={{
-              justifyContent: 'flex-start',
-            }}
-          >
-            <About
-              style={{
-                textAlign: 'left',
-                alignItems: 'flex-start',
-              }}
+              <About
+                style={{
+                  textAlign: 'right',
+                  alignItems: 'flex-end',
+                }}
+                key={project.id}
+              >
+                <h4>{project.title}</h4>
+                <p>{project.description}</p>
+                <ul>
+                  {project.technologies.map(tech => (
+                    <li key={tech}>{tech}</li>
+                  ))}
+                </ul>
+                <div>
+                  <a target="_blank" rel="noreferrer" href={project.repository}>
+                    <FiGithub size={35} />
+                  </a>
+                  <a target="_blank" rel="noreferrer" href={project.website}>
+                    <FiExternalLink size={35} />
+                  </a>
+                </div>
+              </About>
+              <ImageDiv
+                style={{
+                  left: 0,
+                  backgroundImage: `var(--image-shade), url(${project.image})`,
+                }}
+                href={project.website}
+                target="_blank"
+                rel="noreferrer"
+                whileHover={{ scale: 1.05 }}
+              >
+                <ExternalLink>
+                  <FiExternalLink size={75} />
+                </ExternalLink>
+              </ImageDiv>
+            </ProjectsContainer>
+          ) : (
+            <ProjectsContainer
               key={project.id}
-            >
-              <h4>{project.title}</h4>
-              <p>{project.description}</p>
-              <ul>
-                {project.technologies.map(tech => (
-                  <li key={tech}>{tech}</li>
-                ))}
-              </ul>
-              <div>
-                <a target="_blank" rel="noreferrer" href={project.repository}>
-                  <FiGithub size={35} />
-                </a>
-                <a target="_blank" rel="noreferrer" href={project.website}>
-                  <FiExternalLink size={35} />
-                </a>
-              </div>
-            </About>
-            <ImageDiv
               style={{
-                right: 0,
-                backgroundImage: `var(--image-shade), url(${project.image})`,
+                justifyContent: 'flex-start',
               }}
-              href={project.website}
-              target="_blank"
-              rel="noreferrer"
-              whileHover={{ scale: 1.05 }}
             >
-              <ExternalLink>
-                <FiExternalLink size={75} />
-              </ExternalLink>
-            </ImageDiv>
-          </ProjectsContainer>
-        ),
-      )}
-    </Container>
+              <About
+                style={{
+                  textAlign: 'left',
+                  alignItems: 'flex-start',
+                }}
+                key={project.id}
+              >
+                <h4>{project.title}</h4>
+                <p>{project.description}</p>
+                <ul>
+                  {project.technologies.map(tech => (
+                    <li key={tech}>{tech}</li>
+                  ))}
+                </ul>
+                <div>
+                  <a target="_blank" rel="noreferrer" href={project.repository}>
+                    <FiGithub size={35} />
+                  </a>
+                  <a target="_blank" rel="noreferrer" href={project.website}>
+                    <FiExternalLink size={35} />
+                  </a>
+                </div>
+              </About>
+              <ImageDiv
+                style={{
+                  right: 0,
+                  backgroundImage: `var(--image-shade), url(${project.image})`,
+                }}
+                href={project.website}
+                target="_blank"
+                rel="noreferrer"
+                whileHover={{ scale: 1.05 }}
+              >
+                <ExternalLink>
+                  <FiExternalLink size={75} />
+                </ExternalLink>
+              </ImageDiv>
+            </ProjectsContainer>
+          ),
+        )}
+      </Container>
+    </>
   );
-};
+}
 
 export default Projects;

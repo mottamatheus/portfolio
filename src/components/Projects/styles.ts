@@ -79,7 +79,7 @@ export const About = styled.div`
 
   @media (max-width: 1150px) {
     width: 100%;
-    background-color: rgba(10, 10, 10, 0.95);
+    background: rgba(200, 200, 200, 0.65);
     color: var(--text-primary);
     transition: all 0.2s ease;
 

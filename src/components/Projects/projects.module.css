@@ -1,0 +1,42 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.project {
+  display: flex;
+  align-items: center;
+  max-width: 1200px;
+  margin: 50px;
+
+  &:nth-child(even) {
+    background: none;
+
+    & .image {
+      order: 2;
+    }
+  }
+
+  &:nth-child(odd) {
+    background: none;
+  }
+
+  & .image {
+    height: 350px;
+    width: 60%;
+    position: relative;
+  }
+
+  & .about {
+    width: 40%;
+  }
+
+  & .description {
+    padding: 3rem;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.65);
+    backdrop-filter: blur(4px);
+    box-shadow: 0 8px 32px 0 rgba(135, 135, 135, 0.2);
+  }
+}
