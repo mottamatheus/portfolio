@@ -1,8 +1,9 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import Image from 'next/image';
+/* eslint-disable jsx-a11y/anchor-is-valid */
+import React, { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
+import { m } from 'framer-motion';
 import { useRouter } from 'next/router';
+<<<<<<< HEAD
 import { FaJs, FaReact, FaNodeJs } from 'react-icons/fa';
 import { SiTypescript, SiNextDotJs } from 'react-icons/si';
 import { IoIosArrowForward } from 'react-icons/io';
@@ -14,14 +15,33 @@ import {
   Technologies,
   Scroll,
 } from './styles';
+=======
+import { english, portuguese } from '../../languages/index';
+>>>>>>> 462ab6c51a865eb3f9b05e1b759e6699388a0029
 
-const Header: React.FC = () => {
-  const { locale } = useRouter();
-  const { position, headline, cta } = english;
-  const { positionPT, headlinePT, ctaPT } = portuguese;
+import { Container, Content, LinksList, Underline } from './styles';
+
+const Navbar: React.FC = () => {
+  const ref = useRef();
+  const { locale, pathname } = useRouter();
+  const { navbar } = english;
+  const { navbarPT } = portuguese;
+  // const { current } = linkRef;
+
+  const [active, setActive] = useState('');
+
+  const handleActive = useEffect(() => {
+    setActive(pathname);
+    console.log(pathname);
+  }, [pathname]);
+
+  const MotionLink = m(Link);
+
+  const pathNames = ['/', '/projects', '/contact'];
 
   return (
     <Container>
+<<<<<<< HEAD
       <TextSection
         initial={{ x: -250, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
@@ -81,8 +101,54 @@ const Header: React.FC = () => {
           <IoIosArrowForward />
         </Scroll>
       </Link>
+=======
+      <Content>
+        <LinksList>
+          <Link passHref href="/">
+            <a onClick={() => handleActive} role="presentation">
+              Home
+              <Underline
+                pathname={pathname}
+                active={active}
+                layoutId="underline"
+              />
+              <m.span layoutId="underline" />
+            </a>
+          </Link>
+          <Link href="/projects">
+            <a onClick={() => handleActive} role="presentation">
+              Projects
+              <Underline
+                pathname={pathname}
+                active={active}
+                layoutId="underline"
+              />
+            </a>
+          </Link>
+          <Link href="/contact">
+            <a onClick={() => handleActive} role="presentation">
+              Contact
+              <Underline
+                pathname={pathname}
+                active={active}
+                layoutId="underline"
+              />
+            </a>
+          </Link>
+        </LinksList>
+      </Content>
+>>>>>>> 462ab6c51a865eb3f9b05e1b759e6699388a0029
     </Container>
   );
 };
 
-export default Header;
+export default Navbar;
+
+/*
+  <Link href="/projects">
+            {locale === 'en' ? navbar[0] : navbarPT[0]}
+          </Link>
+          <Link href="/contact">
+            {locale === 'en' ? navbar[2] : navbarPT[2]}
+          </Link>
+          */

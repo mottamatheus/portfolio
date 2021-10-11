@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 
 export const Container = styled.div`
   height: 90vh;
@@ -14,7 +14,11 @@ export const Container = styled.div`
   position: relative;
 `;
 
+<<<<<<< HEAD
 export const TextSection = styled.div`
+=======
+export const TextSection = styled(m.div)`
+>>>>>>> 462ab6c51a865eb3f9b05e1b759e6699388a0029
   color: var(--text-primary);
   width: 45rem;
   top: 25rem;
@@ -49,7 +53,11 @@ export const TextSection = styled.div`
   }
 `;
 
+<<<<<<< HEAD
 export const MeSection = styled.div`
+=======
+export const MeSection = styled(m.div)`
+>>>>>>> 462ab6c51a865eb3f9b05e1b759e6699388a0029
   text-align: center;
   display: flex;
   align-items: flex-end;
@@ -86,7 +94,7 @@ export const MeSection = styled.div`
   }
 `;
 
-export const Bubble = styled(motion.div)`
+export const Button = styled(m.div)`
   cursor: pointer;
   display: flex;
   flex-direction: column;
@@ -98,9 +106,9 @@ export const Bubble = styled(motion.div)`
   width: 11rem;
   height: 11rem;
   background: linear-gradient(
-    -45deg,
-    rgba(179, 55, 113, 0.85),
-    rgba(179, 55, 161, 0.85)
+    -35deg,
+    rgba(140, 111, 247, 0.7),
+    rgba(255, 34, 102, 0.7)
   );
   box-shadow: 10px 8px 32px 0 rgba(179, 55, 113, 0.12),
     inset 0 2px 3px rgba(181, 123, 173, 0.8);
@@ -114,7 +122,11 @@ export const Bubble = styled(motion.div)`
   }
 `;
 
+<<<<<<< HEAD
 export const Linkedin = styled(motion.a)`
+=======
+export const SocialButton = styled(m.a)`
+>>>>>>> 462ab6c51a865eb3f9b05e1b759e6699388a0029
   cursor: pointer;
   color: var(--text-primary);
   border: none;
@@ -133,11 +145,17 @@ export const Linkedin = styled(motion.a)`
   z-index: 1;
   align-items: center;
   justify-content: center;
+  outline: none;
+  border: none;
 `;
 
+<<<<<<< HEAD
 export const Github = styled(motion.a)`
   border: none;
   color: var(--text-primary);
+=======
+export const Github = styled(m.a)`
+>>>>>>> 462ab6c51a865eb3f9b05e1b759e6699388a0029
   cursor: pointer;
   display: flex;
   flex-direction: column;
@@ -156,9 +174,13 @@ export const Github = styled(motion.a)`
   justify-content: center;
 `;
 
+<<<<<<< HEAD
 export const Technologies = styled.div`
+=======
+export const Technologies = styled(m.div)`
+>>>>>>> 462ab6c51a865eb3f9b05e1b759e6699388a0029
   color: var(--text-primary);
-  width: 40%;
+  width: 35%;
   min-width: fit-content;
   padding: 2rem;
   background: rgba(255, 255, 255, 0.5);
@@ -170,7 +192,7 @@ export const Technologies = styled.div`
   display: flex;
   position: absolute;
   bottom: 13rem;
-  right: 2rem;
+  right: 10rem;
   justify-content: center;
   align-items: flex-end;
   color: var(--text-primary);
@@ -179,7 +201,7 @@ export const Technologies = styled.div`
 
   span {
     text-align: center;
-    margin-right: 2rem;
+    margin-right: 1.5rem;
     justify-content: center;
     transition: all 0.3s ease;
 
@@ -219,7 +241,7 @@ export const Technologies = styled.div`
   }
 `;
 
-export const Scroll = styled(motion.div)`
+export const Scroll = styled(m.div)`
   position: absolute;
   cursor: pointer;
   font-size: 2rem;

@@ -5,26 +5,28 @@ import { useRouter } from 'next/router';
 import { FaJs, FaReact, FaNodeJs, FaLinkedin, FaGithub } from 'react-icons/fa';
 import { SiTypescript, SiNextDotJs } from 'react-icons/si';
 import { IoIosArrowForward } from 'react-icons/io';
+
 import { english, portuguese } from '../../languages';
 import {
-  Bubble,
+  Button,
   Container,
   TextSection,
   MeSection,
   Technologies,
-  Linkedin,
+  SocialButton,
   Github,
 } from './styles';
 
 const Hero: React.FC = () => {
   const { locale } = useRouter();
-  const { position, headline, cta } = english;
-  const { positionPT, headlinePT, ctaPT } = portuguese;
+  const { position, headline } = english;
+  const { positionPT, headlinePT } = portuguese;
 
   return (
     <Container>
       <TextSection>
         <h1>Matheus Motta</h1>
+
         <h3>{locale === 'en' ? position : positionPT}</h3>
         <p>{locale === 'en' ? headline : headlinePT}</p>
       </TextSection>
@@ -53,7 +55,7 @@ const Hero: React.FC = () => {
       <MeSection>
         <Image src="/me2.png" alt="me" width={453} height={620} />
         <Link href="/projects">
-          <Bubble
+          <Button
             initial={{ visibility: 'hidden', opacity: 0 }}
             animate={{
               visibility: 'visible',
@@ -68,12 +70,16 @@ const Hero: React.FC = () => {
           >
             <p>Meus projetos</p>
             <IoIosArrowForward size={25} />
-          </Bubble>
+          </Button>
         </Link>
+<<<<<<< HEAD
         <Linkedin
           href="https://www.linkedin.com/in/motta-matheus/"
           rel="noreferrer"
           target="_blank"
+=======
+        <SocialButton
+>>>>>>> 462ab6c51a865eb3f9b05e1b759e6699388a0029
           whileHover={{
             scale: 1.1,
             transition: {
@@ -83,11 +89,23 @@ const Hero: React.FC = () => {
           whileTap={{ scale: 0.9 }}
         >
           <FaLinkedin size={50} />
-        </Linkedin>
+        </SocialButton>
         <Github
           href="https://github.com/mottamatheus/"
           rel="noreferrer"
           target="_blank"
+<<<<<<< HEAD
+=======
+          initial={{ visibility: 'hidden', opacity: 0 }}
+          animate={{
+            visibility: 'visible',
+            opacity: 1,
+          }}
+          transition={{
+            opacity: 1,
+            delay: 2.5,
+          }}
+>>>>>>> 462ab6c51a865eb3f9b05e1b759e6699388a0029
           whileHover={{
             scale: 1.1,
             transition: {
