@@ -2,7 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import ContactForm from '../components/ContactForm';
 
-const Home: React.FC = () => {
+export default function Contact() {
   return (
     <div>
       <Head>
@@ -13,6 +13,4 @@ const Home: React.FC = () => {
       </main>
     </div>
   );
-};
-
-export default Home;
+}

@@ -64,7 +64,6 @@ const Hero: React.FC = () => {
             }}
             transition={{
               opacity: 1,
-              delay: 2.5,
               repeat: Infinity,
               duration: 1,
             }}
@@ -73,7 +72,14 @@ const Hero: React.FC = () => {
             <IoIosArrowForward size={25} />
           </Button>
         </Link>
+<<<<<<< HEAD
+        <Linkedin
+          href="https://www.linkedin.com/in/motta-matheus/"
+          rel="noreferrer"
+          target="_blank"
+=======
         <SocialButton
+>>>>>>> 462ab6c51a865eb3f9b05e1b759e6699388a0029
           whileHover={{
             scale: 1.1,
             transition: {
@@ -88,6 +94,8 @@ const Hero: React.FC = () => {
           href="https://github.com/mottamatheus/"
           rel="noreferrer"
           target="_blank"
+<<<<<<< HEAD
+=======
           initial={{ visibility: 'hidden', opacity: 0 }}
           animate={{
             visibility: 'visible',
@@ -97,6 +105,7 @@ const Hero: React.FC = () => {
             opacity: 1,
             delay: 2.5,
           }}
+>>>>>>> 462ab6c51a865eb3f9b05e1b759e6699388a0029
           whileHover={{
             scale: 1.1,
             transition: {

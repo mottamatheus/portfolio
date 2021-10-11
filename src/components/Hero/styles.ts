@@ -14,7 +14,11 @@ export const Container = styled.div`
   position: relative;
 `;
 
+<<<<<<< HEAD
+export const TextSection = styled.div`
+=======
 export const TextSection = styled(m.div)`
+>>>>>>> 462ab6c51a865eb3f9b05e1b759e6699388a0029
   color: var(--text-primary);
   width: 45rem;
   top: 25rem;
@@ -49,7 +53,11 @@ export const TextSection = styled(m.div)`
   }
 `;
 
+<<<<<<< HEAD
+export const MeSection = styled.div`
+=======
 export const MeSection = styled(m.div)`
+>>>>>>> 462ab6c51a865eb3f9b05e1b759e6699388a0029
   text-align: center;
   display: flex;
   align-items: flex-end;
@@ -114,8 +122,14 @@ export const Button = styled(m.div)`
   }
 `;
 
+<<<<<<< HEAD
+export const Linkedin = styled(motion.a)`
+=======
 export const SocialButton = styled(m.a)`
+>>>>>>> 462ab6c51a865eb3f9b05e1b759e6699388a0029
   cursor: pointer;
+  color: var(--text-primary);
+  border: none;
   display: flex;
   flex-direction: column;
   position: absolute;
@@ -135,7 +149,13 @@ export const SocialButton = styled(m.a)`
   border: none;
 `;
 
+<<<<<<< HEAD
+export const Github = styled(motion.a)`
+  border: none;
+  color: var(--text-primary);
+=======
 export const Github = styled(m.a)`
+>>>>>>> 462ab6c51a865eb3f9b05e1b759e6699388a0029
   cursor: pointer;
   display: flex;
   flex-direction: column;
@@ -154,7 +174,11 @@ export const Github = styled(m.a)`
   justify-content: center;
 `;
 
+<<<<<<< HEAD
+export const Technologies = styled.div`
+=======
 export const Technologies = styled(m.div)`
+>>>>>>> 462ab6c51a865eb3f9b05e1b759e6699388a0029
   color: var(--text-primary);
   width: 35%;
   min-width: fit-content;
