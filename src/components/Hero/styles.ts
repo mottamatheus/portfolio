@@ -32,6 +32,10 @@ export const TextSection = styled.div`
   border-radius: 1rem;
   z-index: 2;
 
+  @media only screen and (max-width: 800px) {
+    margin-top: 250px;
+  }
+
   h1 {
     font-size: 5rem;
     margin-bottom: -0.5rem;
@@ -109,6 +113,12 @@ export const Bubble = styled(motion.div)`
   align-items: center;
   justify-content: center;
 
+  @media only screen and (max-width: 800px) {
+    visibility: hidden;
+    opacity: 0;
+    height: 0;
+  }
+
   p {
     margin-bottom: 0.4rem;
   }
@@ -176,6 +186,10 @@ export const Technologies = styled.div`
   color: var(--text-primary);
   font-weight: 600;
   font-family: 'Roboto Mono', monospace;
+
+  @media only screen and (max-width: 800px) {
+    visibility: hidden;
+  }
 
   span {
     text-align: center;

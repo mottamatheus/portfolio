@@ -1,8 +1,8 @@
 export const english = {
   navbar: ['Projects', 'About me', 'Contact'],
-  position: 'FullStack Developer',
+  position: 'FrontEnd Developer',
   headline:
-    "Hello! I'm from Porto Alegre, Brazil. I'm specializing in developing performant and scalable web apps focusing on user experience.",
+    "I'm a developer with experience in the development of performant, accessible web applications with a focus on user experience. ",
   form: [
     'Your name',
     'Your email',
@@ -25,9 +25,9 @@ export const english = {
 
 export const portuguese = {
   navbarPT: ['Projetos', 'Sobre', 'Contato'],
-  positionPT: 'Desenvolvedor FullStack',
+  positionPT: 'Desenvolvedor FrontEnd',
   headlinePT:
-    'Olá! Sou de Porto Alegre e estou me especializando em desenvolver aplicações web performáticas, escaláveis e com foco na experiência de usuário.',
+    'Sou um desenvolvedor com experiência em desenvolver aplicações web performáticas e acessíveis com foco na experiência do usuário.',
   formPT: [
     'Seu nome',
     'Seu email',
