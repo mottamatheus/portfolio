@@ -1,13 +1,6 @@
-const withImages = require('next-images');
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  reactStrictMode: true,
+}
 
-module.exports = withImages({
-  esModule: true,
-  i18n: {
-    locales: ['pt', 'en'],
-    defaultLocale: 'pt',
-    // localeDetection: false,
-  },
-  env: {
-    SENDGRID_API_KEY: process.env.SENDGRID_API_KEY,
-  },
-});
+module.exports = nextConfig
